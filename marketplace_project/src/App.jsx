@@ -10,7 +10,7 @@ import { Routes, Route } from 'react-router-dom';
 import Searchresults from './components/Searchresults';
 import Explore from './components/Explore';
 import Register from './components/Register';
-import Itemdetails from './components/Itemdetails';
+import ItemDetails from './components/ItemDetails/ItemDetails';
 import Createitem from './components/Createitem';
 import Cart from './components/Cart';
 import LoginF from './components/LoginF';
@@ -29,7 +29,7 @@ const App=()=>{
       <Route path='/createItem' element={<Createitem></Createitem>}> </Route>
       <Route path='/login' element={<LoginF></LoginF>}> </Route>
       <Route path='/register' element={<Register></Register>}> </Route>
-      <Route path='/itemdetails' element={<Itemdetails></Itemdetails>}> </Route>
+      <Route path='/itemdetails' element={<ItemDetails></ItemDetails>}> </Route>
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
       <Route path='/cart' element={<Cart></Cart>}> </Route>
     </Routes>

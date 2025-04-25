@@ -49,7 +49,7 @@ export default function CardContainer() {
                         title={product.title}
                         image={product.images[0]} // Assuming the first image is the one to display
                         price={product.price}
-                        ratingsAverage={product.ratingsAverage}
+                        pro_id={product.id}
                       />
                     </div>
                   ))}

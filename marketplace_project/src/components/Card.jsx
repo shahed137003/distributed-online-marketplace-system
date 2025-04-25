@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaStar,FaTicketAlt } from 'react-icons/fa';
-
-function Card({ title, image, price ,ratingsAverage}) {
-  
+import { useNavigate } from 'react-router-dom';
+function Card({ title, image, price,pro_id }) {
+  const navigate = useNavigate();
   return (
+    
 <div
   className="card text-white shadow-sm border-0"
   style={{
@@ -38,7 +39,7 @@ function Card({ title, image, price ,ratingsAverage}) {
     </h5>
 
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <button className="purple-button" style={{ fontSize: '0.8rem', padding: '6px 12px' }}>
+      <button className="purple-button" style={{ fontSize: '0.8rem', padding: '6px 12px' }} onClick={()=>{navigate(`/itemdetails?product_id=${encodeURIComponent(pro_id)}`)}}>
         Details
       </button>
       <div style={{ textAlign: 'right' }}>
