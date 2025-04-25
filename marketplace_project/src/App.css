@@ -1,0 +1,319 @@
+
+.banner {
+  margin: 0;
+  padding: 0;
+  background-image: url('./assets/banner-bg.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+}
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 20px 30px;
+  background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  font-size: 20px;
+  margin-bottom: 200px;
+  margin-left: -400px;
+
+  display: inline-block;
+  
+}
+.banner h1 {
+  font-size: 30px;
+  font-weight: 100;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 40px;
+  margin-left: 15px;
+  margin-top: -150px;
+  display: block;
+  text-align: left;
+}
+.banner p {
+  color: #B8B8B8;
+  font-size: 20px;
+  letter-spacing: 0.8px;
+  margin-left: 15px;
+  line-height: 1.5em;
+  width: 96%;
+  margin-top:10px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+.banner img {
+  animation: updown 3s linear infinite;
+  
+}
+@keyframes updown {
+    0% {
+        transform: translateY(-20px);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
+}
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666;
+}
+img {
+  width: 100px;  /* or any size you want */
+  height: auto;
+}
+
+.img_ani{
+  display: flex; justify-content: flex-end;
+}
+/* card for the entire container */
+/* Container Section */
+/* Section wrapper */
+.cardContainer {
+  padding: 60px 0;
+  background-color: #1e1e1e;   /* dark background */
+}
+
+/* Inner box with heading */
+.cardContainer-bx {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  border-radius: 1rem;         /* rounded corners */
+  background-color: #2a2a2a;   /* slightly lighter dark panel */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+}
+
+/* Section title */
+.cardContainer-bx h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  color: #e0e0e0;              /* light gray text */
+  position: relative;
+  display: inline-block;
+}
+
+/* Underline accent */
+.cardContainer-bx h2::after {
+  content: '';
+  display: block;
+  width: 50%;
+  height: 4px;
+  background-color: #6f42c1;   /* purple accent */
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+/* Carousel container padding */
+.owl-carousel.skill-slider {
+  padding-bottom: 30px;
+}
+
+/* Carousel card wrapper (if used) */
+.card-wrapper {
+  margin: 0 10px;
+  border-radius: 0.5rem;       /* round each slide container */
+  overflow: hidden;            /* clip child content */
+  background-color: #333;      /* card background */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+}
+
+/* Navigation buttons (prev/next) */
+.owl-carousel .owl-nav button {
+  background: rgba(111, 66, 193, 0.8);
+  border: none;
+  color: #fff;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* Positioning nav buttons */
+.owl-carousel .owl-nav .owl-prev { left: -20px; }
+.owl-carousel .owl-nav .owl-next { right: -20px; }
+
+/* Dots styling */
+.owl-carousel .owl-dots {
+  margin-top: 1rem;
+}
+.owl-carousel .owl-dot span {
+  width: 12px;
+  height: 12px;
+  background: #555;
+  display: block;
+  border-radius: 50%;
+  margin: 5px;
+}
+.owl-carousel .owl-dot.active span {
+  background: #6f42c1;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .cardContainer {
+    padding: 40px 0;
+  }
+  .cardContainer-bx {
+    padding: 20px 15px;
+  }
+  .cardContainer-bx h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .cardContainer {
+    padding: 30px 0;
+  }
+  .cardContainer-bx {
+    padding: 15px;
+  }
+  .cardContainer-bx h2 {
+    font-size: 1.75rem;
+  }
+  .owl-carousel .owl-nav .owl-prev { left: -10px; }
+  .owl-carousel .owl-nav .owl-next { right: -10px; }
+}
+
+
+.purple-button {
+  background-color: #6f42c1; /* Bootstrap "purple" */
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 10px rgba(111, 66, 193, 0.3);
+ margin-bottom: 10px;
+}
+
+.purple-button:hover {
+  background-color: #5a32a3;
+  transform: scale(1.05);
+}
+
+.card-title {
+  color: #ffffff; /* white */
+  margin-top: 10px;
+  font-size: 10px;
+}
+
+.footer {
+  background-image: url('./assets/footer-bg.png');    /* Dark background */
+  color: #ccc;                  /* Light grey text */
+}
+
+.footer-text {
+  font-size: 0.9rem;
+}
+
+.social-icons {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #333;             /* Slightly lighter circle */
+  color: #fff;
+  transition: background 0.3s ease, transform 0.2s ease;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  background: #6f42c1;          /* Purple accent on hover */
+  transform: translateY(-2px);
+}
+
+.social-icons a:focus {
+  outline: 2px solid #6f42c1;   /* Accessibility focus ring */
+  outline-offset: 2px;
+}
+
+
+
+
+
+/* Navbar.css */
+.custom-navbar {
+  background-color: #1f1f1f;
+  transition: background-color 0.3s ease;
+  padding: 0.7rem 1.5rem;
+}
+
+.custom-navbar.scrolled {
+  background-color: #111;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-link {
+  color: #ccc !important;
+  margin: -10px 40px;
+  font-weight: 500;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #fff !important;
+}
+
+.navbar-link.active {
+  color: #6f42c1 !important;
+}
+
+.navbar-link.active::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #6f42c1;
+  bottom: -6px;
+  left: 0;
+}
+
+
+
+.search-box {
+  border: 1px solid #6f42c1;
+  border-radius: 0.5rem;
+  background-color: black;
+  width: 300px;
+  height: 40px;
+  transition: border-color 0.3s ease;
+  padding: 0 0rem;
+  margin-left: 100px;
+}
+
+/* <input> text and placeholder color overrides */
+.search-box .MuiInputBase-input {
+  color: #fff;
+}
+
+.search-box .MuiInputBase-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* existing hover & icon rules… */
