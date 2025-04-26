@@ -1,6 +1,7 @@
 /* Navbar.css */
 .custom-navbar {
-    background-color: #1f1f1f;
+    /* background-color: #1f1f1f; */
+    background-image:url('../../assets/banner-bg.png');
     transition: background-color 0.3s ease;
     padding: 0.7rem 1.5rem;
   }
