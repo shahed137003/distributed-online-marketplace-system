@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebookF, FaInstagram, FaTwitter } from 'react-icons/fa'
 import { Container, Row, Col } from "react-bootstrap";
+import './Footer.css'
 export default function Footer() {
   return (
     <footer className="footer py-4">

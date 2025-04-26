@@ -68,134 +68,133 @@ const formik = useFormik({
 
 return (
   <>
-<div className="w-100 d-flex justify-content-center align-items-center ">
-        <h1 className="text-center mt-5 text-violet fs-1 fw-bold">Sign Up</h1>
-        {isLoading ? (
-          <FontAwesomeIcon icon={faRocket} size="lg" className="text-violet mt-5 ms-3 fa-spin fs-1 fw-bold" />
-        ) : (
-          <FontAwesomeIcon icon={faRocket} size="lg" className="text-violet mt-5 ms-3 fs-1 fw-bold " />
-        )}
-      </div>
+  {/* <div className="signUpWrapper"> */}
+    <div className="w-100 d-flex justify-content-center align-items-center">
+      <h1 className="text-center mt-5 text-violet fs-1 fw-bold">Sign Up</h1>
+      {isLoading ? (
+        <FontAwesomeIcon icon={faRocket} size="lg" className="text-violet mt-5 ms-3 fa-spin fs-1 fw-bold" />
+      ) : (
+        <FontAwesomeIcon icon={faRocket} size="lg" className="text-violet mt-5 ms-3 fs-1 fw-bold" />
+      )}
+    </div>
 
-      <Container className="w-100 mx-auto mt-5 d-flex align-items-center justify-content-center">
-        <Row className="w-100">
-          <Col>
-            <Form onSubmit={formik.handleSubmit} className="w-50 mx-auto">
-              {/* Name input */}
-              <Form.Group className="mb-3" controlId="name">
-                <Form.Label className="text-white">Name</Form.Label>
-                <Form.Control
-                  type="text"
-                  placeholder="Amany"
-                  value={formik.values.name}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="w-80 mx-auto"
-                  required
-                />
-              </Form.Group>
-              {formik.errors.name && formik.touched.name ? (
-                <Alert variant="primary" className="mx-auto">
-                  Error! {formik.errors.name}
-                </Alert>
-              ) : null}
+    <Container className="w-100 mx-auto mt-5 d-flex align-items-center justify-content-center">
+      <Row className="w-100">
+        <Col>
+          <Form onSubmit={formik.handleSubmit} className="w-50 mx-auto">
+            {/* Name input */}
+            <Form.Group className="mb-3" controlId="name">
+              <Form.Label className="text-white">Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Amany"
+                value={formik.values.name}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className="w-80 mx-auto"
+                required
+              />
+            </Form.Group>
+            {formik.errors.name && formik.touched.name && (
+              <Alert variant="primary" className="mx-auto">
+                Error! {formik.errors.name}
+              </Alert>
+            )}
 
-              {/* Email input */}
-              <Form.Group className="mb-3" controlId="email">
-                <Form.Label className="text-white">Email</Form.Label>
-                <Form.Control
-                  type="email"
-                  placeholder="admin@gmail.com"
-                  value={formik.values.email}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="w-80 mx-auto"
-                  required
-                />
-              </Form.Group>
-              {formik.errors.email && formik.touched.email ? (
-                <Alert variant="primary" className="mx-auto">
-                  Error! {formik.errors.email}
-                </Alert>
-              ) : null}
+            {/* Email input */}
+            <Form.Group className="mb-3" controlId="email">
+              <Form.Label className="text-white">Email</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="admin@gmail.com"
+                value={formik.values.email}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className="w-80 mx-auto"
+                required
+              />
+            </Form.Group>
+            {formik.errors.email && formik.touched.email && (
+              <Alert variant="primary" className="mx-auto">
+                Error! {formik.errors.email}
+              </Alert>
+            )}
 
-              {/* Password input */}
-              <Form.Group className="mb-3" controlId="password">
-                <Form.Label className="text-white">Password</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="********"
-                  value={formik.values.password}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="w-80 mx-auto"
-                  required
-                />
-              </Form.Group>
-              {formik.errors.password && formik.touched.password ? (
-                <Alert variant="primary" className="mx-auto">
-                  Error! {formik.errors.password}
-                </Alert>
-              ) : null}
+            {/* Password input */}
+            <Form.Group className="mb-3" controlId="password">
+              <Form.Label className="text-white">Password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="********"
+                value={formik.values.password}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className="w-80 mx-auto"
+                required
+              />
+            </Form.Group>
+            {formik.errors.password && formik.touched.password && (
+              <Alert variant="primary" className="mx-auto">
+                Error! {formik.errors.password}
+              </Alert>
+            )}
 
-              {/* RePassword input */}
-              <Form.Group className="mb-3" controlId="rePassword">
-                <Form.Label className="text-white">Re-password</Form.Label>
-                <Form.Control
-                  type="password"
-                  placeholder="********"
-                  value={formik.values.rePassword}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="w-80 mx-auto"
-                  required
-                />
-              </Form.Group>
-              {formik.errors.rePassword && formik.touched.rePassword ? (
-                <Alert variant="primary" className="mx-auto">
-                  Error! {formik.errors.rePassword}
-                </Alert>
-              ) : null}
+            {/* RePassword input */}
+            <Form.Group className="mb-3" controlId="rePassword">
+              <Form.Label className="text-white">Re-password</Form.Label>
+              <Form.Control
+                type="password"
+                placeholder="********"
+                value={formik.values.rePassword}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className="w-80 mx-auto"
+                required
+              />
+            </Form.Group>
+            {formik.errors.rePassword && formik.touched.rePassword && (
+              <Alert variant="primary" className="mx-auto">
+                Error! {formik.errors.rePassword}
+              </Alert>
+            )}
 
+            {/* Phone input */}
+            <Form.Group className="mb-4" controlId="phone">
+              <Form.Label className="text-white">Phone</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="+201012073589"
+                value={formik.values.phone}
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                className="w-80 mx-auto"
+                required
+              />
+            </Form.Group>
+            {formik.errors.phone && formik.touched.phone && (
+              <Alert variant="primary" className="mx-auto">
+                Error! {formik.errors.phone}
+              </Alert>
+            )}
 
-
-              {/* Phone input */}
-              <Form.Group className="mb-4" controlId="phone">
-                <Form.Label className="text-white">Phone</Form.Label>
-                <Form.Control
-                  type="phone"
-                  placeholder="+201012073589"
-                  value={formik.values.phone}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
-                  className="w-80 mx-auto"
-                  required
-                />
-              </Form.Group>
-              {formik.errors.phone && formik.touched.phone ? (
-                <Alert variant="primary" className="mx-auto">
-                  Error! {formik.errors.phone}
-                </Alert>
-              ) : null}
-
-              <Button
-                type="submit"
-                className="w-100 fw-bold bg-violet rounded-3"
-              >
-                {isLoading ? (
-                  <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true">
-                    <span className="visually-hidden">Loading...</span>
-                  </Spinner>
-                ) : (
-                  'Sign Up'
-                )}
-              </Button>
-            </Form>
-          </Col>
-        </Row>
-      </Container>
-    </>
-
+            <Button
+              type="submit"
+              className="w-100 fw-bold bg-violet rounded-3"
+            >
+              {isLoading ? (
+                <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true">
+                  <span className="visually-hidden">Loading...</span>
+                </Spinner>
+              ) : (
+                'Sign Up'
+              )}
+            </Button>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
+  {/* </div> */}
+</>
 
 
 

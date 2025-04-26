@@ -12,6 +12,7 @@ import { FaFire } from 'react-icons/fa';
 import { useNavigate } from 'react-router-dom';
 import {  Avatar } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
+import './NavBar.css'
 function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);

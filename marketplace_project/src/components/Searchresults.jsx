@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import Card from './Card';
+import Card from './Card/Card'
 import { DataContext } from '../context/Itemcontext';
 
 export default function Searchresults() {
@@ -33,7 +33,7 @@ export default function Searchresults() {
               title={product.title}
               image={product.images[0]} // Assuming the first image is the one to display
               price={product.price}
-              ratingsAverage={product.ratingsAverage}
+              pro_id={product.id}
             />
           ))}
         </div>

@@ -1,6 +1,7 @@
 import React from 'react';
-import { FaStar,FaTicketAlt } from 'react-icons/fa';
+
 import { useNavigate } from 'react-router-dom';
+import './Card.css'
 function Card({ title, image, price,pro_id }) {
   const navigate = useNavigate();
   return (

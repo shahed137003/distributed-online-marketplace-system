@@ -1,10 +1,11 @@
 import React, { useState, useEffect, useContext} from 'react';
-import Card from './Card';
+import Card from '../Card/Card'
 import Carousel from 'react-multi-carousel';
 import axios from 'axios'; // for fetching products data
 import "react-multi-carousel/lib/styles.css"; // to ensure Carousel styles are applied
-import { DataContext } from '../context/Itemcontext';
-
+import './CardContainer.css'
+// import { DataContext } from '../context/Itemcontext';
+import { DataContext } from '../../context/Itemcontext';
 
 export default function CardContainer() {
 

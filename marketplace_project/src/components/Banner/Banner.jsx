@@ -1,13 +1,13 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import headerImg from "../assets/header-img.svg";
-
+import headerImg from "../../assets/header-img.svg";
+import './Banner.css'
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 
 
-export const Banner = () => {
+export default function Banner() {
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -57,9 +57,10 @@ export const Banner = () => {
      
       style={{
         color: 'white',
+        
       }}
     >
-      <Container>
+      <Container  >
         <Row >
           <Col xs={12} md={6} xl={7}>
             <TrackVisibility>
@@ -87,7 +88,17 @@ export const Banner = () => {
             <TrackVisibility>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__zoomIn" : ""} style={{ textAlign: 'right' }}>
-                  <img  src={headerImg} alt="Header Img" style={{ width: '80%', maxHeight: '600px',display: 'block', marginLeft: 'auto',marginTop: '100px' }} />
+<img
+  src={headerImg}
+  alt="Header Img"
+  style={{
+    width: '80%',
+    maxHeight: '600px',
+    display: 'block',
+    margin: '100px auto 0 auto', // marginTop, marginSides, marginBottom
+    background: 'transparent',   // <=== Important
+  }}
+/>
                 </div>
               }
             </TrackVisibility>

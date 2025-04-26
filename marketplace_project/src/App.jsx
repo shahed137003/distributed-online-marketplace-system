@@ -4,7 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import 'animate.css';
-import NavBar from './components/NavBar';
+import NavBar from './components/NavBar/NavBar'
 import Home from './components/Home'
 import { Routes, Route } from 'react-router-dom';
 import Searchresults from './components/Searchresults';
@@ -15,7 +15,7 @@ import Createitem from './components/Createitem';
 import Cart from './components/Cart';
 import Login from './components/Login/Login';
 // import { Toaster } from './../node_modules/react-hot-toast/src/components/toaster';
-import { Toaster } from 'react-hot-toast';
+
 
 const App=()=>{
   return (
