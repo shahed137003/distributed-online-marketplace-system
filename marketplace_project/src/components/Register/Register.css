@@ -40,3 +40,9 @@
 .text-violet{
   color:#8B5CF6 !important;
 }
+
+.main{
+  background-color: black;
+  height: 100vh;
+}
+

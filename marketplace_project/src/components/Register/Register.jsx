@@ -69,7 +69,9 @@ const formik = useFormik({
 return (
   <>
   {/* <div className="signUpWrapper"> */}
-    <div className="w-100 d-flex justify-content-center align-items-center">
+  <div class="main">
+
+  <div className="w-100 d-flex justify-content-center align-items-center">
       <h1 className="text-center mt-5 text-violet fs-1 fw-bold">Sign Up</h1>
       {isLoading ? (
         <FontAwesomeIcon icon={faRocket} size="lg" className="text-violet mt-5 ms-3 fa-spin fs-1 fw-bold" />
@@ -193,6 +195,8 @@ return (
         </Col>
       </Row>
     </Container>
+  </div>
+    
   {/* </div> */}
 </>
 

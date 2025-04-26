@@ -62,6 +62,7 @@ const formik = useFormik({
 return (
   // <div className="signUpWrapper">
   <>
+  <div className="main">
   <div className="w-100 d-flex justify-content-center align-items-center">
     <h1 className="text-center mt-5 text-violet fs-1 fw-bold">Login </h1>
     {isLoading ? (
@@ -126,6 +127,8 @@ return (
       </Col>
     </Row>
   </Container>
+  </div>
+  
 {/* </div> */}
 
 </>
