@@ -5,3 +5,18 @@
     display: block;
 } */
 
+.productDetails{
+    height: 20vh;
+    background-image:url('../../assets/banner-bg.png');
+    /* background-position: center; */
+    background-size: cover;
+}
+
+.ItemCard{
+    height: 75vh;
+    background-color: #141420;
+}
+
+.ownerImg{
+    height: 100%;
+}
