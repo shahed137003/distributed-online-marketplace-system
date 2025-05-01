@@ -2,7 +2,7 @@ import React from 'react';
 
 import { useNavigate } from 'react-router-dom';
 import './Card.css'
-function Card({ title, image, price,pro_id }) {
+function Card({ title, image, price,pro_id}) {
   const navigate = useNavigate();
   return (
     
@@ -40,7 +40,7 @@ function Card({ title, image, price,pro_id }) {
     </h5>
 
     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-      <button className="purple-button" style={{ fontSize: '0.8rem', padding: '6px 12px' }} onClick={()=>{navigate(`/itemdetails?product_id=${encodeURIComponent(pro_id)}`)}}>
+      <button className="purple-button" style={{ fontSize: '0.8rem', padding: '6px 12px' }} onClick={() => { navigate(`/itemdetails/${pro_id}`) }}>
         Details
       </button>
       <div style={{ textAlign: 'right' }}>
