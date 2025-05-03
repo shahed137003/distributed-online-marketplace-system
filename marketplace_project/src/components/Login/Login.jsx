@@ -7,14 +7,17 @@ import {useState} from "react";
 // import toast from './../../../node_modules/react-hot-toast/src/index';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
-import { Container, Row, Col, Form, Button, Alert, Spinner} from 'react-bootstrap';
+import { Container, Row, Col, Form, Button, Alert, Spinner, Nav} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import './Login.css'
+import { Link } from 'react-router-dom';
+import { AuthContext } from '../../context/AuthContext';
 
 const Login = () =>{
 
   const navigate = useNavigate();
   const [isLoading, setisLoading] = useState(false);
-
+  const {setToken} = useContext(AuthContext);
  // initial values of data fields that should be returned to the backend with the values in the input 
  // formik catches them and update these fields on change and sends them to the onSubmit fn
 const user = {
@@ -31,6 +34,8 @@ async function signIn(values) { // values are sent by formik we can recieve them
 try{
    const {data} = await axios.post("https://ecommerce.routemisr.com/api/v1/auth/signin",values); // send the values with the post method in the body which are the user object updated with new values 
    toast.success(data.message);
+   localStorage.setItem("token",data.token);
+   setToken(data.token);
    navigate('/home');
    setisLoading(false);
   }
@@ -123,6 +128,7 @@ return (
               'Login'
             )}
           </Button>
+         <h3 className="text-white mt-5 text-center">Don't have an account?...<Link  to='/register' class="text-violet ms-3">Sign Up</Link></h3>
         </Form>
       </Col>
     </Row>

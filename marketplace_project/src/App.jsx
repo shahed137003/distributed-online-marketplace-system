@@ -11,7 +11,7 @@ import Searchresults from './components/Searchresults';
 import Explore from './components/Explore';
 import Register from './components/Register/Register';
 import ItemDetails from './components/ItemDetails/ItemDetails';
-import Cart from './components/Cart';
+import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
 import Createitem from './components/Createitem/Createitem';
 // import { Toaster } from './../node_modules/react-hot-toast/src/components/toaster';
