@@ -48,10 +48,11 @@ export default function Cart() {
               </div>
      
     </Card>
-    <Button variant="danger" onClick={clearCart} className="mt-5 ms-auto d-flex cartClearBtn p-3">Clear Cart</Button>
 
            </div>
           })}
+    <Button variant="danger" onClick={clearCart} className="mt-5 ms-auto d-flex cartClearBtn p-3">Clear Cart</Button>
+
           </div>}
     </>
   )
