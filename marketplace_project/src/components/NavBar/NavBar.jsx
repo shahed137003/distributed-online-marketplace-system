@@ -1,7 +1,7 @@
 
 // src/components/NavBar.jsx
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
-import { useState, useEffect } from "react";
+import { useState, useEffect,useContext } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import { Badge, IconButton ,Typography} from '@mui/material';
@@ -13,10 +13,12 @@ import { useNavigate } from 'react-router-dom';
 import {  Avatar } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import './NavBar.css'
+import { CartContext } from "../../context/CartContext"
 function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
-  const [cartCount, setCartCount] = useState(3); // Example cart count
+  // const [cartCount, setCartCount] = useState(3); // Example cart count
+  const {numOfItems} = useContext(CartContext);
   const [searchTerm, setSearchTerm] = useState('');
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
@@ -112,7 +114,7 @@ function NavBar() {
           }}
         >
           <Badge
-  badgeContent={cartCount}
+  badgeContent={numOfItems}
   sx={{
     '& .MuiBadge-badge': {
       backgroundColor: '#6f42c1',

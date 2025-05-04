@@ -25,7 +25,11 @@ const App=()=>{
     
   <>
    
-    <NavBar></NavBar>
+   <AuthContextProvider>
+  <CartContextProvider>
+    <NavBar />
+  </CartContextProvider>
+</AuthContextProvider>
     
     <Routes>
       <Route path='/' element={<Home ></Home>}> </Route>
