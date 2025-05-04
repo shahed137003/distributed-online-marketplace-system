@@ -127,7 +127,8 @@ useEffect(function(){
             totalPrice,
             cartId,
             numOfItems,
-            Loading
+            Loading,
+            token
            }
         }>
            {children}

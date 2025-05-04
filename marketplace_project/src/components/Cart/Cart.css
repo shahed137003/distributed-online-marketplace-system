@@ -1,0 +1,35 @@
+.empty, .notEmpty, .cartLoading{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/banner-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+.cartImg{
+    width: 20%;
+}
+
+.cartCard{
+  background-color: transparent !important;
+  border: solid 1px white !important;
+}
+
+.bg-violet{
+    background-color:#8B5CF6 !important;
+  }
+
+  .cartClearBtn{
+    margin-right: 7%;
+  }
+  
+
+
+
+
+
+

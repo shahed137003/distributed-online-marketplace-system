@@ -14,6 +14,9 @@ import ItemDetails from './components/ItemDetails/ItemDetails';
 import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
 import Createitem from './components/Createitem/Createitem';
+import CartContextProvider from './context/CartContext'
+import AuthContextProvider from './context/AuthContext'
+
 // import { Toaster } from './../node_modules/react-hot-toast/src/components/toaster';
 
 
@@ -29,11 +32,11 @@ const App=()=>{
       <Route path='/home' element={<Home ></Home>}> </Route>
       <Route path='/Explore' element={<Explore></Explore>}> </Route>
       <Route path='/createItem' element={<Createitem></Createitem>}> </Route>
-      <Route path='/login' element={<Login></Login>}> </Route>
+      <Route path='/login' element={<AuthContextProvider><Login></Login></AuthContextProvider>}> </Route>
       <Route path='/register' element={<Register></Register>}> </Route>
-      <Route path='/itemdetails/:product_id' element={<ItemDetails></ItemDetails>}> </Route>
+      <Route path='/itemdetails/:product_id' element={<AuthContextProvider><CartContextProvider><ItemDetails></ItemDetails></CartContextProvider></AuthContextProvider>}> </Route>
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
-      <Route path='/cart' element={<Cart></Cart>}> </Route>
+     <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
     </Routes>
     
    {/* <Toaster/> */}

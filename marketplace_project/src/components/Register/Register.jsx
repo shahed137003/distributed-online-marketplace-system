@@ -9,6 +9,7 @@ import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { Container, Row, Col, Form, Button, Alert, Spinner} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Register = () =>{
@@ -191,6 +192,7 @@ return (
                 'Sign Up'
               )}
             </Button>
+            <h3 className="text-white mt-5 text-center">Already have an account?...<Link  to='/login' className="text-violet ms-3">Login</Link></h3>
           </Form>
         </Col>
       </Row>

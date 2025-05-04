@@ -6,15 +6,19 @@ import { useParams } from 'react-router-dom';
 import  { useState, useEffect} from 'react';
 import axios from "axios";
 import { useQuery} from '@tanstack/react-query';
+import { CartContext } from "../../context/CartContext"
+
+import { useContext} from "react";
 
 //import { FallingLines } from 'react-loader-spinner';
 
-//import {useState} from "react";
+// import {useState} from "react";
 
 const ItemDetails = () => {
-
+  const {addProductToCart} = useContext(CartContext);
   const { product_id } = useParams();
-
+  const [loading,setLoading] = useState(false);
+  
   const getProductDetails = async () => {
     const response = await axios.get(`https://ecommerce.routemisr.com/api/v1/products/${product_id}`);
     console.log(response.data);
@@ -28,7 +32,16 @@ const ItemDetails = () => {
 
 
   async function AddToCart(){
-
+    setLoading(true);
+    const data = await addProductToCart(product_id);
+   
+    if(data.status == "success"){
+      toast.success(data.message);
+      setLoading(false);
+    }else{
+      toast.error("error");
+      setLoading(false);
+    }
   }
 
 

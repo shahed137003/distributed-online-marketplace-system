@@ -12,6 +12,7 @@ import { useNavigate } from 'react-router-dom';
 import './Login.css'
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
+import { useContext } from "react"
 
 const Login = () =>{
 
@@ -33,14 +34,14 @@ async function signIn(values) { // values are sent by formik we can recieve them
   setisLoading(true);
 try{
    const {data} = await axios.post("https://ecommerce.routemisr.com/api/v1/auth/signin",values); // send the values with the post method in the body which are the user object updated with new values 
-   toast.success(data.message);
+  //  toast.success(data.message);
    localStorage.setItem("token",data.token);
    setToken(data.token);
    navigate('/home');
    setisLoading(false);
   }
   catch(e){
-   toast.error(e.response.data.message);
+   console.error(e.response.data.message);
    setisLoading(false);
   }
 }
@@ -128,7 +129,7 @@ return (
               'Login'
             )}
           </Button>
-         <h3 className="text-white mt-5 text-center">Don't have an account?...<Link  to='/register' class="text-violet ms-3">Sign Up</Link></h3>
+         <h3 className="text-white mt-5 text-center">Don't have an account?...<Link  to='/register' className="text-violet ms-3">Sign Up</Link></h3>
         </Form>
       </Col>
     </Row>
