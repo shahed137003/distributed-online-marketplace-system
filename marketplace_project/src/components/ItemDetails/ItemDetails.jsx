@@ -11,7 +11,7 @@ import { CartContext } from "../../context/CartContext"
 import { useContext} from "react";
 import {RingLoader} from "react-spinners";
 import { useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify'; // optional
+import { toast } from 'react-toastify';
 
 
 

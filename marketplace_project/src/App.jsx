@@ -19,6 +19,7 @@ import AuthContextProvider from './context/AuthContext'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/Footer/Footer';
+import UserProfile from './components/UserProfile/UserProfile';
 
 
 const App=()=>{
@@ -41,7 +42,8 @@ const App=()=>{
       <Route path='/register' element={<Register></Register>}> </Route>
       <Route path='/itemdetails/:product_id' element={<AuthContextProvider><CartContextProvider><ItemDetails></ItemDetails></CartContextProvider></AuthContextProvider>}> </Route>
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
-     <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
+      <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
+      <Route path='/userProfile' element={<AuthContextProvider><CartContextProvider><UserProfile></UserProfile></CartContextProvider></AuthContextProvider>}> </Route>
     </Routes>
     <ToastContainer position="top-right" autoClose={3000} />
     </>
