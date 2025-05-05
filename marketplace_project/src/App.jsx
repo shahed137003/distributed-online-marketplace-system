@@ -16,8 +16,9 @@ import Login from './components/Login/Login';
 import Createitem from './components/Createitem/Createitem';
 import CartContextProvider from './context/CartContext'
 import AuthContextProvider from './context/AuthContext'
-
-// import { Toaster } from './../node_modules/react-hot-toast/src/components/toaster';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Footer from './components/Footer/Footer';
 
 
 const App=()=>{
@@ -42,8 +43,7 @@ const App=()=>{
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
      <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
     </Routes>
-    
-   {/* <Toaster/> */}
+    <ToastContainer position="top-right" autoClose={3000} />
     </>
       )
   

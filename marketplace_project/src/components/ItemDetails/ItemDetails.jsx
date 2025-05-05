@@ -3,21 +3,23 @@ import './itemsDetails.css';
 import flowerImage from '../../assets/flower.png';
 import ownerImage from '../../assets/owner.png';
 import { useParams } from 'react-router-dom';
-import  { useState, useEffect} from 'react';
+import  { useState} from 'react';
 import axios from "axios";
 import { useQuery} from '@tanstack/react-query';
 import { CartContext } from "../../context/CartContext"
 
 import { useContext} from "react";
+import {RingLoader} from "react-spinners";
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify'; // optional
 
-//import { FallingLines } from 'react-loader-spinner';
 
-// import {useState} from "react";
 
 const ItemDetails = () => {
   const {addProductToCart} = useContext(CartContext);
   const { product_id } = useParams();
   const [loading,setLoading] = useState(false);
+  const navigate=useNavigate();
   
   const getProductDetails = async () => {
     const response = await axios.get(`https://ecommerce.routemisr.com/api/v1/products/${product_id}`);
@@ -25,7 +27,8 @@ const ItemDetails = () => {
     return response.data; 
   };
 
-  const { data, isLoading, isError } = useQuery({
+
+  const { data,isLoading,isError } = useQuery({
     queryKey: ['ProductDetails', product_id],
     queryFn: getProductDetails,
   });
@@ -34,9 +37,18 @@ const ItemDetails = () => {
   async function AddToCart(){
     setLoading(true);
     const data = await addProductToCart(product_id);
+
+    if(data.message=="Please log in first")
+    {
+      toast.warn("Please log in to add items to your cart");
+      setLoading(false);
+      navigate("/login");
+      return;
+    }
    
     if(data.status == "success"){
-      toast.success(data.message);
+     toast.success(data.message);
+
       setLoading(false);
     }else{
       toast.error("error");
@@ -45,8 +57,12 @@ const ItemDetails = () => {
   }
 
 
-  if (isLoading) return <p>Loading...</p>;
-  if (isError) return <p>Error loading product.</p>;
+  if (isLoading) {return <>
+<div className='d-flex justify-content-center align-items-center' style={{backgroundColor:'#141420', height:'100vh'}}>
+  <RingLoader color="#8B5CF6" />
+  </div>
+  </> ;}
+
 
 
   return (
@@ -100,7 +116,10 @@ const ItemDetails = () => {
                     </div>
                   </div>
                 </div>
-                <button href="#"  onClick={AddToCart}  className="btn btn-outline-light w-100 mt-2 p-3 fs-4">Add to Cart</button>
+                <button href="#"  onClick={AddToCart}  className="btn btn-outline-light w-100 mt-2 p-3 fs-4">{loading?
+                <div className='d-flex justify-content-center align-items-center'>
+  <RingLoader color="#8B5CF6" />
+  </div>:"Add to Cart"} </button>
               </div>
             </div>
           </div>

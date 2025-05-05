@@ -1,6 +1,7 @@
 import axios from "axios";
 import { createContext, useContext, useEffect, useState } from "react"
 import { AuthContext } from "./AuthContext";
+import { useNavigate } from 'react-router-dom';
 
 export const CartContext = createContext();
 
@@ -16,7 +17,6 @@ const CartContextProvider = ({children}) => {
     async function getLoggedUserCart(){
         setLoading(true);
         try {
-
         const {data} = await axios.get("https://ecommerce.routemisr.com/api/v1/cart",
         {
             headers:{
@@ -35,14 +35,20 @@ const CartContextProvider = ({children}) => {
     setLoading(false);
 }
 }
+const navigate = useNavigate();
 
 useEffect(function(){
     if(token !== null){
         getLoggedUserCart();
        }
 },[token]);
+
+
      
      async function addProductToCart(productId){
+        if(!token){
+                return { status: "unauthorized", message: "Please log in first" };       
+        }
         try {
             const {data} = await axios.post("https://ecommerce.routemisr.com/api/v1/cart",
                 {
