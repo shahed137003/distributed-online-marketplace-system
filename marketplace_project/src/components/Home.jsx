@@ -15,6 +15,7 @@ export default function Home() {
    
  
    <Banner></Banner>
+
  <CardContainer></CardContainer>
  <Footer></Footer>
        </div>
