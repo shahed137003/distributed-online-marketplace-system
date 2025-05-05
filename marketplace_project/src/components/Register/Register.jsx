@@ -4,7 +4,7 @@ import * as Yup from 'yup';
 import './Register.css'
 import {useFormik} from 'formik'
 import {useState} from "react";
-import toast from './../../../node_modules/react-hot-toast/src/index';
+import { toast } from 'react-toastify';
 import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faRocket } from '@fortawesome/free-solid-svg-icons';
 import { Container, Row, Col, Form, Button, Alert, Spinner} from 'react-bootstrap';
