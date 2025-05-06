@@ -1,47 +1,114 @@
-import React, { useContext, useState, useEffect } from 'react';
+import React, { useContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import Card from './Card/Card'
+import Card from './Card/Card';
 import { DataContext } from '../context/Itemcontext';
+import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 
 export default function Searchresults() {
   const location = useLocation();
   const query = new URLSearchParams(location.search);
-  const search = query.get('search')?.toLowerCase() || '';  // Get the search query from URL
+  const search = query.get('search')?.toLowerCase() || '';
 
-  // Access the shared data from the context
   const { products } = useContext(DataContext);
-  if ( products.length == 0) {
-    return <p>Loading products...</p>;
+
+  if (products.length === 0) {
+    return (
+      <div style={styles.loadingContainer}>
+        <p style={styles.loadingText}>Loading products...</p>
+      </div>
+    );
   }
-  // Filter products based on search query
-  const filteredProducts = products.filter(product => 
-    product.title.toLowerCase().includes(search) 
+
+  const filteredProducts = products.filter(product =>
+    product.title.toLowerCase().includes(search)
   );
 
   return (
-    <div style={{ padding: '20px',backgroundColor: '#2a2a2a' }}>
+    <div style={styles.wrapper}>
+      <h2 style={styles.header}>
+        Search Results for "<span style={styles.highlight}>{search}</span>"
+      </h2>
 
       {filteredProducts.length > 0 ? (
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
-          gap: '20px',
-        }}>
-          {filteredProducts.map((product) => (
+        <div style={styles.grid}>
+          {filteredProducts.map(product => (
             <Card
               key={product.id}
               title={product.title}
-              image={product.images[0]} // Assuming the first image is the one to display
+              image={product.images[0]}
               price={product.price}
               pro_id={product.id}
             />
           ))}
         </div>
       ) : (
-        <p style={{ color: 'white', textAlign: 'center', marginTop: '20px' }}>
-          No products found matching "<strong>{search}</strong>"
-        </p>
+        <div style={styles.noResultsContainer}>
+          <SentimentVeryDissatisfiedIcon style={styles.noResultsIcon} />
+          <p style={styles.noResults}>
+            No products found matching "<strong>{search}</strong>"
+          </p>
+        </div>
       )}
     </div>
   );
 }
+
+const styles = {
+  wrapper: {
+    padding: '40px',
+    backgroundColor: '#2a2a2a',
+    minHeight: '100vh',
+    fontFamily: "'Segoe UI', Tahoma, Geneva, Verdana, sans-serif",
+  },
+  header: {
+    fontSize: '28px',
+    marginBottom: '30px',
+    background: 'linear-gradient(45deg, #6f42c1, #8e44ad)',
+    WebkitBackgroundClip: 'text',
+    WebkitTextFillColor: 'transparent',
+    textAlign: 'center',
+  },
+  highlight: {
+    color: '#8b5cf6',
+  },
+  grid: {
+    display: 'grid',
+    gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
+    gap: '24px',
+  },
+  noResultsContainer: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    marginTop: '40px',
+  },
+  noResultsIcon: {
+    fontSize: 80,
+    color: '#9b59b6',
+    marginBottom: '10px',
+    textShadow: '0 2px 4px rgba(0, 0, 0, 0.3)',
+    transition: 'transform 0.3s ease',
+    animation: 'pulse 1.5s infinite',
+  }
+  
+  ,
+  noResults: {
+    color: '#ccc',
+    fontSize: '20px',
+    textAlign: 'center',
+  },
+  loadingContainer: {
+    backgroundColor: '#1e1e2f',
+    color: '#fff',
+    minHeight: '100vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+  loadingText: {
+    fontSize: '22px',
+    color: '#bbb',
+  },
+
+  
+};
