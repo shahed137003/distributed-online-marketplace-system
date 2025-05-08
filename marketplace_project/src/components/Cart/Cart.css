@@ -6,7 +6,7 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    width: 100vw;
+ 
 
 }
 
@@ -17,8 +17,7 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100vw;
-
+  height:120vh;
 }
 
 .cartImg{
@@ -36,7 +35,8 @@
   }
 
   .cartClearBtn{
-    margin-right: 7%;
+    margin-right: 10%;
+
   }
   
 .checkoutBtn{
@@ -46,6 +46,14 @@
 .totalPriceHeading{
   margin-left: 7%;
 }
+
+.customPag .page-link, .customPag .page-item.active .page-link{
+ background-color: white;
+ color: black;
+ margin-right: 20px;
+ border-radius: 5px;
+}
+
 
 
 

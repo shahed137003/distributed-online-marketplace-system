@@ -31,12 +31,8 @@ const AllOrders = () => {
             {data?.data.map(function(order,idx){return <div key={idx} className="separateOrder  mt-5 container border rounded-5">
                 <h4 className="text-light p-2">Total Order Price: {order.totalOrderPrice} EGP</h4>
                 <h4 className="text-light px-2">Payment Method Type: {order.paymentMethodType} </h4>
-               
-               <div className="d-flex flex-wrap mt-0 p-5">
-               {order.cartItems?.map(function(item,idx){return <div key={idx}>
-                <img src={item.product.imageCover} className="w-full mx-5 my-3" alt="" />
-               </div>})}
-               </div>
+                
+              
            
             </div>})}
         </div>
