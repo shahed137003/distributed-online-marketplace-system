@@ -4,7 +4,9 @@ import Carousel from 'react-multi-carousel';
 import axios from 'axios'; // for fetching products data
 import "react-multi-carousel/lib/styles.css"; // to ensure Carousel styles are applied
 import './CardContainer.css'
+import CreatorCard from '../CreatorCard/CreatorCard';
 // import { DataContext } from '../context/Itemcontext';
+import ownerImage from '../../assets/owner.png';
 import { DataContext } from '../../context/Itemcontext';
 
 export default function CardContainer() {
@@ -52,6 +54,18 @@ export default function CardContainer() {
                         price={product.price}
                         pro_id={product.id}
                       />
+                    </div>
+                  ))}
+                </Carousel>
+              </div>
+              <div className="cardContainer-bx wow zoomIn">
+                <h2>Creators</h2>
+
+                {/* Carousel Component */}
+                <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                  {products.map((product) => (
+                    <div key={product.id}>
+                    <CreatorCard></CreatorCard>
                     </div>
                   ))}
                 </Carousel>

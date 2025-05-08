@@ -16,7 +16,8 @@ export default function Createitem() {
     price: '',
     title: '',
     description: '',
-    category: ''
+    category: '',
+    quantity: ''
   });
 
   const handleChangeData = (e) => {
@@ -197,6 +198,16 @@ export default function Createitem() {
               type="text"
               placeholder="Type something..."
               value={formData.category}
+              onChange={handleChangeData}
+            />
+          </Form.Group>
+          <Form.Group controlId="formQuantity" className="mb-3">
+            <Form.Label className="text-white">Enter  Quantity</Form.Label>
+            <Form.Control
+              name="quantity"
+              type="text"
+              placeholder="Type something..."
+              value={formData.quantity}
               onChange={handleChangeData}
             />
           </Form.Group>

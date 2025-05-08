@@ -36,18 +36,8 @@ function NavBar() {
   return (
     <Navbar expand="md" className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}>
     <Container className="d-flex align-items-center justify-content-between">
-    <Dropdown className="black-dropdown" style={{marginLeft:'-100px'}}>
-  <Dropdown.Toggle style={{ background: 'linear-gradient(45deg, #6f42c1, #8e44ad)', borderColor: '#6f42c1', color: 'white' }} id="dropdown-basic">
-    Categories
-  </Dropdown.Toggle>
-
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
-
+   
+ 
       <div className="d-flex align-items-center">
       <IconButton color="inherit">
   <Badge color="default" badgeContent={null}>
@@ -104,7 +94,7 @@ function NavBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          {['home', 'login', 'createItem'].map((link) => (
+          {['home', 'login'].map((link) => (
             <Nav.Link
               as={Link}
               key={link}
