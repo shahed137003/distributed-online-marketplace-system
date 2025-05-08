@@ -13,6 +13,7 @@ import Register from './components/Register/Register';
 import ItemDetails from './components/ItemDetails/ItemDetails';
 import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
+import AllOrders from './components/AllOrders/AllOrders';
 import Createitem from './components/Createitem/Createitem';
 import CartContextProvider from './context/CartContext'
 import AuthContextProvider from './context/AuthContext'
@@ -20,7 +21,15 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/Footer/Footer';
 import UserProfile from './components/UserProfile/UserProfile';
+
 import Balance from './components/Balance/Balance';
+
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import  InventoryContextProvider  from './context/InventoryContext';
+import EditProfile from './components/EditProfile/EditProfile';
+
+
+
 
 const App=()=>{
   return (
@@ -29,7 +38,9 @@ const App=()=>{
    
    <AuthContextProvider>
   <CartContextProvider>
+  <InventoryContextProvider>
     <NavBar />
+    </InventoryContextProvider>
   </CartContextProvider>
 </AuthContextProvider>
     
@@ -40,11 +51,15 @@ const App=()=>{
       <Route path='/createItem' element={<Createitem></Createitem>}> </Route>
       <Route path='/login' element={<AuthContextProvider><Login></Login></AuthContextProvider>}> </Route>
       <Route path='/register' element={<Register></Register>}> </Route>
+      <Route path='/allOrders' element={<AllOrders></AllOrders>}> </Route>
       <Route path='/itemdetails/:product_id' element={<AuthContextProvider><CartContextProvider><ItemDetails></ItemDetails></CartContextProvider></AuthContextProvider>}> </Route>
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
       <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
-      <Route path='/userProfile' element={<AuthContextProvider><CartContextProvider><UserProfile></UserProfile></CartContextProvider></AuthContextProvider>}> </Route>
-      <Route path='/balance' element={<AuthContextProvider><CartContextProvider><Balance></Balance></CartContextProvider></AuthContextProvider>}></Route>
+      <Route path='/balance' element={<AuthContextProvider><CartContextProvider><Balance></Balance></CartContextProvider></AuthContextProvider>}> </Route>
+      <Route path='/userProfile' element={<AuthContextProvider><InventoryContextProvider><UserProfile></UserProfile></InventoryContextProvider></AuthContextProvider>}> </Route>
+      <Route path='/editProfile' element={<AuthContextProvider><InventoryContextProvider><EditProfile></EditProfile></InventoryContextProvider></AuthContextProvider>}> </Route>
+
+
     </Routes>
     <ToastContainer position="top-right" autoClose={3000} />
     </>

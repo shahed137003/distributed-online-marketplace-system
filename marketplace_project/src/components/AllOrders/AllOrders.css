@@ -1,0 +1,27 @@
+.allOrdersMainEmpty{
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/banner-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    background-color: black;
+}
+
+.allOrdersMain{
+    background-color: black;
+
+}
+
+.separateOrder{
+    background-image: url('../../assets/background_3.jpg');
+    
+}
+
+.text-violet{
+    color:#8B5CF6 !important;
+  }
+  
+
