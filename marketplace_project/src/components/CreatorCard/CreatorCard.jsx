@@ -3,7 +3,7 @@ import ownerImage from '../../assets/owner.png';
 import { useNavigate } from 'react-router-dom';
 import authorImg from "../../assets/user.jpg"
 
-export default function CreatorCard({ title = "Default Title", pro_id = 1, price = "100" }) {
+export default function CreatorCard({ title = "Default Title", pro_id , price = "100" }) {
   const navigate = useNavigate();
 
   return (
@@ -20,6 +20,7 @@ export default function CreatorCard({ title = "Default Title", pro_id = 1, price
       }}
       onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
       onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
+      onClick={()=>{navigate("/userProfile")}}
     >
       {/* Owner Info FIRST */}
       <div

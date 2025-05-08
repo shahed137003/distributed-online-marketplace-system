@@ -117,7 +117,7 @@ export default function Createitem() {
               <a href="/home" className="text-decoration-none text-secondary">Home</a>
             </li>
             <li className="breadcrumb-item text-secondary">
-              <a href="/Explore" className="text-decoration-none text-secondary">Explore</a>
+              <a href="/Balance" className="text-decoration-none text-secondary">Balance</a>
             </li>
             <li className="breadcrumb-item active text-white" aria-current="page">Item Details</li>
           </ol>

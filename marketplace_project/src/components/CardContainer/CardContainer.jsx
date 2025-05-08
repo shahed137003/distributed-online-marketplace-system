@@ -65,7 +65,7 @@ export default function CardContainer() {
                 <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                   {products.map((product) => (
                     <div key={product.id}>
-                    <CreatorCard></CreatorCard>
+                    <CreatorCard pro_id={product.id}></CreatorCard>
                     </div>
                   ))}
                 </Carousel>

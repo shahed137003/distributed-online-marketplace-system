@@ -2,20 +2,21 @@ import React from 'react';
 import ownerImage from '../../assets/owner.png';
 import { useNavigate } from 'react-router-dom';
 import './Card.css'
-function Card({ title, image, price,pro_id}) {
+function Card({ title, image, price,pro_id,ownerimage,ownername}) {
   const navigate = useNavigate();
   return (
     
 <div
   className="card text-white shadow-sm border-0"
   style={{
-    maxWidth: '260px',
+    maxWidth: '300px',
     borderRadius: '1rem',
     background: 'linear-gradient(135deg, #3a3f51, #1f1f2e)',
     overflow: 'hidden',
     marginTop: '40px',
     transition: 'transform 0.3s ease',
     cursor: 'pointer',
+    
   }}
   onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
   onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}

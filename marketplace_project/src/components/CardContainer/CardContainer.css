@@ -2,20 +2,23 @@
 /* Container Section */
 /* Section wrapper */
 .cardContainer {
-    padding: 60px 0;
-    background-color: #1e1e1e;   /* dark background */
-  }
-  
-  /* Inner box with heading */
-  .cardContainer-bx {
-    text-align: center;
-    max-width: 100%;
-    margin: 30px auto;
-    padding: 0 15px;
-    border-radius: 1rem;         /* rounded corners */
-    background-color: #2a2a2a;   /* slightly lighter dark panel */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
-  }
+  padding: 60px 0;
+  background-color: #1e1e1e;
+  width: 100%;
+  overflow-x: hidden; /* prevents horizontal scroll if children overflow */
+}
+
+/* Inner box with heading */
+.cardContainer-bx {
+  text-align: center;
+  max-width: 100%;       
+  width: 100%;              
+  margin: 30px auto;       /* center the container */
+  padding: 20px;           /* adds breathing space inside */
+  border-radius: 1rem;
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
   
   /* Section title */
   .cardContainer-bx h2 {
@@ -39,10 +42,12 @@
   
   /* Carousel container padding */
   .owl-carousel.skill-slider {
+ 
     padding-bottom: 30px;
+    width: 100%;
   }
   
-  /* Carousel card wrapper (if used) */
+  /* Carousel card wrapper  */
   .card-wrapper {
     margin: 0 10px;
     border-radius: 0.5rem;       /* round each slide container */
