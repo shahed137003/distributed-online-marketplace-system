@@ -7,16 +7,21 @@ import './Cart.css'
 import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
+import Badge from 'react-bootstrap/Badge';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTicket } from '@fortawesome/free-solid-svg-icons';
+import { useNavigate } from 'react-router-dom';
 
 export default function Cart() {
   const {products,totalPrice,Loading,updateProductQnty,removeProduct,clearCart} = useContext(CartContext);
-
+  const navigate = useNavigate();
  
   if(Loading){
     return <div className="cartLoading d-flex justify-content-center align-items-center"><PacmanLoader color="#8B5CF6"/></div>
   }
   return (
     <>
+    
     {products.length==0?
     <div className="empty d-flex flex-column justify-content-center align-items-center">
     <div className="d-flex justify-content-center align-items-center">
@@ -28,6 +33,17 @@ export default function Cart() {
       </div>
      
         :<div className="notEmpty overflow-hidden">
+          
+          <div className="mt-5 d-flex">
+       
+          <h2 className="mb-0 text-white totalPriceHeading"> Total Price: 
+       <Badge bg="light" className="ms-3 text-muted">{totalPrice} EGP</Badge>
+      </h2>
+    <Button variant="light" size="lg" className="ms-auto checkoutBtn" onClick={function(){navigate('/payment')}}>
+    
+        Proceed to checkout
+      </Button>
+      </div>
           {products.map(function(item,idx){
            return <div className="" key={idx}>
 
@@ -52,6 +68,8 @@ export default function Cart() {
            </div>
           })}
     <Button variant="danger" onClick={clearCart} className="mt-5 ms-auto d-flex cartClearBtn p-3">Clear Cart</Button>
+    
+    
 
           </div>}
     </>
