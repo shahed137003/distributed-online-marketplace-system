@@ -21,6 +21,10 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Footer from './components/Footer/Footer';
 import UserProfile from './components/UserProfile/UserProfile';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import  InventoryContextProvider  from './context/InventoryContext';
+
+
 
 
 const App=()=>{
@@ -30,7 +34,9 @@ const App=()=>{
    
    <AuthContextProvider>
   <CartContextProvider>
+  <InventoryContextProvider>
     <NavBar />
+    </InventoryContextProvider>
   </CartContextProvider>
 </AuthContextProvider>
     
@@ -45,7 +51,7 @@ const App=()=>{
       <Route path='/itemdetails/:product_id' element={<AuthContextProvider><CartContextProvider><ItemDetails></ItemDetails></CartContextProvider></AuthContextProvider>}> </Route>
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
       <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
-      <Route path='/userProfile' element={<AuthContextProvider><CartContextProvider><UserProfile></UserProfile></CartContextProvider></AuthContextProvider>}> </Route>
+      <Route path='/userProfile' element={<AuthContextProvider><InventoryContextProvider><UserProfile></UserProfile></InventoryContextProvider></AuthContextProvider>}> </Route>
     </Routes>
     <ToastContainer position="top-right" autoClose={3000} />
     </>
