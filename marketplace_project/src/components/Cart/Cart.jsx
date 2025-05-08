@@ -14,7 +14,7 @@ import { faTicket } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
 export default function Cart() {
-  const { products, totalPrice, Loading, updateProductQnty, removeProduct, clearCart } = useContext(CartContext);
+  const { products, totalPrice, Loading, updateProductQnty, removeProduct, clearCart, cartId } = useContext(CartContext);
   const navigate = useNavigate();
 
   // Pagination state
@@ -116,7 +116,7 @@ export default function Cart() {
           >
             Clear Cart
           </Button>
-
+          {/* <h1>{cartId}</h1> */}
           {/* Pagination controls */}
           {totalPages > 1 && (
             <Pagination className="mt-5 justify-content-center customPag">
