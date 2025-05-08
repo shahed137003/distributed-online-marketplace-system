@@ -13,7 +13,7 @@ import { faTicket } from '@fortawesome/free-solid-svg-icons';
 import { useNavigate } from 'react-router-dom';
 
 export default function Cart() {
-  const {products,totalPrice,Loading,updateProductQnty,removeProduct,clearCart} = useContext(CartContext);
+  const {products,totalPrice,Loading,updateProductQnty,removeProduct,clearCart,cartId} = useContext(CartContext);
   const navigate = useNavigate();
  
   if(Loading){
@@ -43,6 +43,7 @@ export default function Cart() {
     
         Proceed to checkout
       </Button>
+      {/* <h1>{cartId}</h1> */}
       </div>
           {products.map(function(item,idx){
            return <div className="" key={idx}>
@@ -61,12 +62,14 @@ export default function Cart() {
         <span>{item.count}</span>
         <Button variant="light" onClick={()=> updateProductQnty(item.product._id,item.count-1)} className="ms-4">-</Button>
       </Card.Body>
+   
               </div>
      
     </Card>
 
            </div>
           })}
+           
     <Button variant="danger" onClick={clearCart} className="mt-5 ms-auto d-flex cartClearBtn p-3">Clear Cart</Button>
     
     

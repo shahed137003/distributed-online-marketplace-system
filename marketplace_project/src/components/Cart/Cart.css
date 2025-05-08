@@ -1,4 +1,4 @@
-.empty, .notEmpty, .cartLoading{
+.empty, .cartLoading{
     height: 100vh;
     margin: 0;
     padding: 0;
@@ -7,7 +7,18 @@
     background-size: cover;
     background-repeat: no-repeat;
     width: 100vw;
-    height: 100vh;
+
+}
+
+.notEmpty{
+  margin: 0;
+  padding: 0;
+  background-color:black;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+
 }
 
 .cartImg{
@@ -17,6 +28,7 @@
 .cartCard{
   background-color: transparent !important;
   border: solid 1px white !important;
+  background-image: url(../../assets/background_3.jpg);
 }
 
 .bg-violet{

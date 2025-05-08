@@ -13,6 +13,7 @@ import Register from './components/Register/Register';
 import ItemDetails from './components/ItemDetails/ItemDetails';
 import Cart from './components/Cart/Cart';
 import Login from './components/Login/Login';
+import AllOrders from './components/AllOrders/AllOrders';
 import Createitem from './components/Createitem/Createitem';
 import CartContextProvider from './context/CartContext'
 import AuthContextProvider from './context/AuthContext'
@@ -40,6 +41,7 @@ const App=()=>{
       <Route path='/createItem' element={<Createitem></Createitem>}> </Route>
       <Route path='/login' element={<AuthContextProvider><Login></Login></AuthContextProvider>}> </Route>
       <Route path='/register' element={<Register></Register>}> </Route>
+      <Route path='/allOrders' element={<AllOrders></AllOrders>}> </Route>
       <Route path='/itemdetails/:product_id' element={<AuthContextProvider><CartContextProvider><ItemDetails></ItemDetails></CartContextProvider></AuthContextProvider>}> </Route>
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
       <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
