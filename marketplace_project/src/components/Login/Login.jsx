@@ -37,7 +37,7 @@ try{
   toast.success(data.message);
    localStorage.setItem("token",data.token);
    setToken(data.token);
-   navigate('/home');
+   navigate('/userProfile');
    setisLoading(false);
   }
   catch(e){

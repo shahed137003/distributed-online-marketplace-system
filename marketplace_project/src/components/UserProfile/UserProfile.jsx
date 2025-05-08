@@ -62,7 +62,7 @@ function UserProfile() {
                               <i className="fa-brands fa-discord text-white"></i>
                             </a>
                           </div>
-                          <button type="button" className="btn btn-outline-secondary  text-white rounded-4  border border-2'" onClick={navigate('')}>Edit Profile</button>
+                          <button type="button" className="btn btn-outline-secondary  text-white rounded-4  border border-2'"   onClick={() => navigate(`/editProfile`)}>Edit Profile</button>
                         </div>
                       </div>
 

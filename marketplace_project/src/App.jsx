@@ -23,6 +23,7 @@ import Footer from './components/Footer/Footer';
 import UserProfile from './components/UserProfile/UserProfile';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import  InventoryContextProvider  from './context/InventoryContext';
+import EditProfile from './components/EditProfile/EditProfile';
 
 
 
@@ -52,6 +53,8 @@ const App=()=>{
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
       <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
       <Route path='/userProfile' element={<AuthContextProvider><InventoryContextProvider><UserProfile></UserProfile></InventoryContextProvider></AuthContextProvider>}> </Route>
+      <Route path='/editProfile' element={<AuthContextProvider><InventoryContextProvider><EditProfile></EditProfile></InventoryContextProvider></AuthContextProvider>}> </Route>
+
     </Routes>
     <ToastContainer position="top-right" autoClose={3000} />
     </>
