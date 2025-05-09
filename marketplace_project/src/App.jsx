@@ -48,7 +48,7 @@ const App=()=>{
       <Route path='/createItem' element={<Createitem></Createitem>}> </Route>
       <Route path='/login' element={<AuthContextProvider><Login></Login></AuthContextProvider>}> </Route>
       <Route path='/register' element={<Register></Register>}> </Route>
-      <Route path='/allOrders' element={<AllOrders></AllOrders>}> </Route>
+      <Route path='/Previous orders' element={<AllOrders></AllOrders>}> </Route>
       <Route path='/itemdetails/:product_id' element={<AuthContextProvider><CartContextProvider><ItemDetails></ItemDetails></CartContextProvider></AuthContextProvider>}> </Route>
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
       <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>

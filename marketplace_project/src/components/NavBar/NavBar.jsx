@@ -94,7 +94,7 @@ function NavBar() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ms-auto">
-          {['home', 'login'].map((link) => (
+          {['home', 'Previous orders', 'login'].map((link) => (
             <Nav.Link
               as={Link}
               key={link}

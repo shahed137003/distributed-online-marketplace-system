@@ -51,10 +51,10 @@ const AllOrders = () => {
                 <h5 className="text-light px-2">Payment Method Type: {order.paymentMethodType} </h5>
                 <h5  className="text-light p-2">Created at: {order.createdAt}</h5>
                 <div className="paymentStatus">
-                <span className="text-light p-2">Payment Status:</span> {order.isPaid?<Badge bg="success" className="allOrdersBadge"> Successful</Badge>:<Badge bg="warning">Pending</Badge>}  
+                <span className="text-light p-2">Payment Status:</span> {order.isPaid?<Badge bg="success" className="allOrdersBadge"> Successful</Badge>:<Badge bg="secondary">Pending</Badge>}  
                 </div>
                 <div className="deliveryStatus">
-                <span className="text-light p-2">Delivery Status:</span>{order.isDelivered?<Badge bg="success" className="allOrdersBadge"> Successful</Badge>:<Badge bg="warning">Pending</Badge>} 
+                <span className="text-light p-2">Delivery Status:</span>{order.isDelivered?<Badge bg="success" className="allOrdersBadge"> Successful</Badge>:<Badge bg="secondary">Pending</Badge>} 
                 </div>
             </div>})}
              {/* Pagination controls */}
