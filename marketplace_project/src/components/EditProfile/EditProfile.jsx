@@ -3,6 +3,7 @@ import "./EditProfile.css";
 import authorImg from "../../assets/user.jpg";
 import { useNavigate } from 'react-router-dom';
 
+
 function EditProfile() {
   return (
     <>
@@ -27,6 +28,22 @@ function EditProfile() {
             </li>
           </ol>
         </nav>
+      </div>
+      <div className='container-fluid' style={{ backgroundColor: "#0A0615", height: "200vh" }}>
+      <div className='container'>
+      <div className='row'>
+     <div className='col-sm-2'>
+     <div className='img'>
+     <img src={authorImg}
+      className="img-fluid rounded-start "
+      alt="User"/>
+     </div>
+     </div>
+     <div className='col-sm-10'>
+
+     </div>
+      </div>
+      </div>
       </div>
     </>
   )
