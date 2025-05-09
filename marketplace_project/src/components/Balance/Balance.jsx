@@ -8,15 +8,24 @@ import authorImg from "../../assets/user.jpg"
 import {RingLoader} from "react-spinners";
 import { useNavigate } from 'react-router-dom';
 import { Tabs, Tab } from 'react-bootstrap';
-
+import bannerBg from '../../assets/background_3.jpg';
 import Card from '../Card/Card'
 import { CartContext } from "../../context/CartContext"
-
+import Pagination from 'react-bootstrap/Pagination';
 export default function Balance() {
     //   const { products } = useContext(DataContext);
       const {products,Loading} = useContext(CartContext);
       
         const navigate = useNavigate();
+        let active = 1;
+let items = [];
+for (let number = 3; number <= 5; number++) {
+  items.push(
+    <Pagination.Item key={number} active={number === active}>
+      {number}
+    </Pagination.Item>,
+  );
+}
   return (
    <>
    
@@ -41,7 +50,7 @@ export default function Balance() {
 
   <div
     style={{
-      backgroundColor: '#353444',
+      backgroundImage: `url(${bannerBg})`,
       borderRadius: '0.5rem',
       padding: '1px 20px',
       display: 'flex',
@@ -51,7 +60,7 @@ export default function Balance() {
       fontSize: '1.2rem',
       width: '80%',
       marginLeft:'100px',
-      height: '430px',
+      height: '330px',
       boxShadow: '0 4px 10px rgba(111, 66, 193, 0.3)',
     }}
   >
@@ -59,8 +68,8 @@ export default function Balance() {
     src={authorImg}
     roundedCircle
     style={{
-      width: '400px',
-      height: '400px',
+      width: '300px',
+      height: '300px',
       objectFit: 'cover',
       border: '2px solid #6f42c1',
       boxShadow: '0 2px 8px rgba(0,0,0,0.5)',
@@ -71,17 +80,17 @@ export default function Balance() {
   {/* Balance Section */}
   <div style={{ display: 'flex', gap: '20px', marginBottom: '20px' }}>
     <div>
-      <small className="text-secondary" style={{ fontSize: '12px', display: 'block', marginBottom: '4px' }}>
+      <small className="text-secondary" style={{ fontSize: '28px', display: 'block', marginBottom: '4px' }}>
         Current Balance
       </small>
-      <div style={{ fontSize: '16px', fontWeight: 'bold' }}>100 EGP</div>
+      <div style={{ fontSize: '30px', fontWeight: 'bold' }}>100 EGP</div>
     </div>
 
     <div style={{  marginLeft: '100px' }}>
-      <small className="text-secondary" style={{ fontSize: '12px', display: 'block', marginBottom: '4px' }}>
+      <small className="text-secondary" style={{ fontSize: '28px', display: 'block', marginBottom: '4px' }}>
         sold products number
       </small>
-      <div style={{ fontSize: '16px', fontWeight: 'bold' }}>100 </div>
+      <div style={{ fontSize: '30px', fontWeight: 'bold' }}>100 </div>
     </div>
   </div>
 
@@ -117,20 +126,42 @@ export default function Balance() {
     ):products.length === 0 ? (
       <p className="text-white text-center">Your cart is empty.</p>
     ) : (
-      <Row className="g-4">
-        {products.map((item, idx) => (
-          <Col key={idx} xs={12} sm={6} md={4}>
-            <div key={item.product._id}>
-              <Card
-                title={item.product.title}
-                image={item.product.imageCover}
-                price={item.price}
-                pro_id={item.product._id}
-              />
-            </div>
-          </Col>
-        ))}
-      </Row>
+     <Row className="g-4">
+  {products.map((item, idx) => (
+   <Col key={idx} xs={12} sm={6} md={4} className="d-flex justify-content-center">
+  <div
+    key={item.product._id}
+    style={{
+      width: '100%',  // Ensures it takes full available width
+      maxWidth: '330px',
+      minWidth: '330px',
+     hight:'80px',
+      borderRadius: '0.75rem',
+      paddingLeft: '50px',
+      paddingRight: '50px',
+      paddingBottom: '10px',
+      paddingTop: '5px',
+      display: 'flex',
+      flexDirection: 'column',
+      justifyContent: 'space-between',
+     
+      flexShrink: 0,  // Prevent shrinking
+      
+    }}
+  >
+    <Card
+      title={item.product.title}
+      image={item.product.imageCover}
+      price={item.price}
+      pro_id={item.product._id}
+    />
+  </div>
+</Col>
+
+
+  ))}
+</Row>
+
     )}
   </div>
 </Tab>

@@ -13,6 +13,24 @@
   }
   
 
+.custom-pagination .page-item.active .page-link {
+  background-color: #8e44ad; /* Purple background */
+  border-color: #8e44ad; /* Purple border */
+}
+
+.custom-pagination .page-link {
+  color: #8e44ad; /* Purple text color */
+  border-color: #8e44ad; /* Purple border */
+}
+
+.custom-pagination .page-link:hover {
+  background-color: #8e44ad; /* Purple hover effect */
+  color: #fff; /* White text on hover */
+}
+
+.custom-pagination .page-link:focus {
+  box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.25); /* Focus effect */
+}
 
 
 
