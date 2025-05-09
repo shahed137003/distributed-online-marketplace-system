@@ -1,0 +1,564 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250427015021_Orderpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-CommerceWebsite.DAL\\Migrations\\20250427015021_Orderpayment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\migrations\\20250426224329_products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\migrations\\20250426224329_products.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\migrations\\20250426021229_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\migrations\\20250426021229_identity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\data\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\data\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\data\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\data\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250427013739_Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:E-CommerceWebsite.DAL\\Migrations\\20250427013739_Order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\dtos\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\dtos\\productupdatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\manager\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\manager\\productmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\dtos\\productreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\dtos\\productreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\dtos\\productadddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\dtos\\productadddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\data\\models\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\data\\models\\shoppingcart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|solutionrelative:e-commercewebsite.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\data\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\data\\models\\payment.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\data\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\data\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\data\\websitecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\data\\websitecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\repository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\repository\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\data\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\data\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|solutionrelative:e-commercewebsite.api\\controllers\\productcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|solutionrelative:e-commercewebsite.api\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.api\\e-commercewebsite.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|solutionrelative:e-commercewebsite.api\\e-commercewebsite.api.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\e-commercewebsite.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\e-commercewebsite.bll.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\e-commercewebsite.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\e-commercewebsite.dal.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\manager\\iproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\manager\\iproductmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\repository\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\manager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\manager\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\manager\\iaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\manager\\iaccountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\dtos\\accountdto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\dtos\\accountdto\\registerdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|solutionrelative:e-commercewebsite.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\dtos\\accountdto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\dtos\\accountdto\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.bll\\dtos\\accountdto\\registerresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8D3627F9-76E1-492C-B02A-8C557A84F4DF}|E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj|solutionrelative:e-commercewebsite.bll\\dtos\\accountdto\\registerresultdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.api\\e-commercewebsite.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}",
+      "RelativeMoniker": "D:0:0:{F9671F0A-7AAD-4BC3-BDCA-51F100F10BC8}|E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj|solutionrelative:e-commercewebsite.api\\e-commercewebsite.api.http||{5703B403-55E7-4C63-8C88-A8F52C7A45C5}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|c:\\users\\huawei\\source\\repos\\e-commercewebsite.api\\e-commercewebsite.dal\\migrations\\20250424151207_intiallyyy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1BB49C23-BCDC-48F7-825F-D67E8FAE5227}|E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj|solutionrelative:e-commercewebsite.dal\\migrations\\20250424151207_intiallyyy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "20250427015021_Orderpayment.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250427015021_Orderpayment.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Migrations\\20250427015021_Orderpayment.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250427015021_Orderpayment.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Migrations\\20250427015021_Orderpayment.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T01:50:21.788Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20250427013739_Order.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250427013739_Order.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Migrations\\20250427013739_Order.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250427013739_Order.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Migrations\\20250427013739_Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T01:37:39.302Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Data\\Models\\Product.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\Product.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Data\\Models\\Product.cs",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAYwCMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:06:13.917Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ProductManager.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Manager\\ProductManager.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Manager\\ProductManager.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Manager\\ProductManager.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Manager\\ProductManager.cs",
+              "ViewState": "AgIAACIAAAAAAAAAAAApwDIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:30:25.148Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationUser.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\ApplicationUser.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Data\\Models\\ApplicationUser.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\ApplicationUser.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Data\\Models\\ApplicationUser.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:00:45.992Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProductReadDto.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\ProductReadDto.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Dtos\\ProductReadDto.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\ProductReadDto.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Dtos\\ProductReadDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:27:05.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "20250426021229_identity.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250426021229_identity.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Migrations\\20250426021229_identity.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250426021229_identity.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Migrations\\20250426021229_identity.cs",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAQwB0AAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T02:12:30.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "20250426224329_products.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250426224329_products.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Migrations\\20250426224329_products.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250426224329_products.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Migrations\\20250426224329_products.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T22:43:29.645Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ProductAddDto.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\ProductAddDto.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Dtos\\ProductAddDto.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\ProductAddDto.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Dtos\\ProductAddDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:08:23.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ShoppingCart.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\ShoppingCart.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Data\\Models\\ShoppingCart.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\ShoppingCart.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Data\\Models\\ShoppingCart.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T21:00:59.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\appsettings.json",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\appsettings.json",
+              "RelativeToolTip": "E-CommerceWebsite.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-24T14:16:48.317Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ProductUpdateDto.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\ProductUpdateDto.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Dtos\\ProductUpdateDto.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\ProductUpdateDto.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Dtos\\ProductUpdateDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:28:01.199Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Payment.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\Payment.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Data\\Models\\Payment.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\Payment.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Data\\Models\\Payment.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T00:29:56.723Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Data\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\Order.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Data\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-27T00:29:37.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "WebsiteContext.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\WebsiteContext.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Data\\WebsiteContext.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\WebsiteContext.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Data\\WebsiteContext.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:05:59.835Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\Category.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Data\\Models\\Category.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Data\\Models\\Category.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Data\\Models\\Category.cs",
+              "ViewState": "AgIAAAIAAAAAAAAAAIBJwAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T22:29:12.327Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "ProductController.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\Controllers\\ProductController.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.API\\Controllers\\ProductController.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\Controllers\\ProductController.cs",
+              "RelativeToolTip": "E-CommerceWebsite.API\\Controllers\\ProductController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAIBJwBcAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:49:09.858Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Repository\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Repository\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Repository\\IProductRepository.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Repository\\IProductRepository.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvw8AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:07:19.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.API\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "E-CommerceWebsite.API\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:50:10.329Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "E-CommerceWebsite.API.csproj",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj",
+              "RelativeToolTip": "E-CommerceWebsite.API\\E-CommerceWebsite.API.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-25T19:46:31.35Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "E-CommerceWebsite.BLL.csproj",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\E-CommerceWebsite.BLL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-24T14:09:23.227Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "E-CommerceWebsite.DAL.csproj",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\E-CommerceWebsite.DAL.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-04-25T07:48:01.44Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Repository\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Repository\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Repository\\ProductRepository.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Repository\\ProductRepository.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:06:44.532Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "IProductManager.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Manager\\IProductManager.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Manager\\IProductManager.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Manager\\IProductManager.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Manager\\IProductManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:29:01.172Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "AccountManager.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Manager\\AccountManager.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Manager\\AccountManager.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Manager\\AccountManager.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Manager\\AccountManager.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAnwD8AAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:08:26.556Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "IAccountManager.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Manager\\IAccountManager.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Manager\\IAccountManager.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Manager\\IAccountManager.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Manager\\IAccountManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:08:31.246Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "RegisterDto.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\AccountDto\\RegisterDto.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Dtos\\AccountDto\\RegisterDto.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\AccountDto\\RegisterDto.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Dtos\\AccountDto\\RegisterDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAIBJwBQAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T00:10:53.159Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "LoginDto.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\AccountDto\\LoginDto.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Dtos\\AccountDto\\LoginDto.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\AccountDto\\LoginDto.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Dtos\\AccountDto\\LoginDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-25T23:44:57.775Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\Program.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.API\\Program.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\Program.cs",
+              "RelativeToolTip": "E-CommerceWebsite.API\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAmwCYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T14:57:31.935Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "RegisterResultDto.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\AccountDto\\RegisterResultDto.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.BLL\\Dtos\\AccountDto\\RegisterResultDto.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.BLL\\Dtos\\AccountDto\\RegisterResultDto.cs",
+              "RelativeToolTip": "E-CommerceWebsite.BLL\\Dtos\\AccountDto\\RegisterResultDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-26T13:59:53.023Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "E-CommerceWebsite.API.http",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\E-CommerceWebsite.API.http",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.API\\E-CommerceWebsite.API.http",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.API\\E-CommerceWebsite.API.http",
+              "RelativeToolTip": "E-CommerceWebsite.API\\E-CommerceWebsite.API.http",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003502|",
+              "WhenOpened": "2025-04-24T14:16:45.924Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "20250424151207_intiallyyy.cs",
+              "DocumentMoniker": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250424151207_intiallyyy.cs",
+              "RelativeDocumentMoniker": "E-CommerceWebsite.DAL\\Migrations\\20250424151207_intiallyyy.cs",
+              "ToolTip": "C:\\Users\\HUAWEI\\source\\repos\\E-CommerceWebsite.API\\E-CommerceWebsite.DAL\\Migrations\\20250424151207_intiallyyy.cs",
+              "RelativeToolTip": "E-CommerceWebsite.DAL\\Migrations\\20250424151207_intiallyyy.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-24T15:12:07.688Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\bin\Release\net8.0\E-CommerceWebsite.DAL.deps.json
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\bin\Release\net8.0\E-CommerceWebsite.DAL.runtimeconfig.json
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\bin\Release\net8.0\E-CommerceWebsite.DAL.dll
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\bin\Release\net8.0\E-CommerceWebsite.DAL.pdb
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.csproj.AssemblyReference.cache
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.AssemblyInfoInputs.cache
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.AssemblyInfo.cs
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.csproj.CoreCompileInputs.cache
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.sourcelink.json
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.dll
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\refint\E-CommerceWebsite.DAL.dll
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.pdb
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\E-CommerceWebsite.DAL.genruntimeconfig.cache
+C:\Users\HUAWEI\source\repos\E-CommerceWebsite.API\E-CommerceWebsite.DAL\obj\Release\net8.0\ref\E-CommerceWebsite.DAL.dll
