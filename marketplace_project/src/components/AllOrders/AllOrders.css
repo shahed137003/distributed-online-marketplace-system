@@ -12,7 +12,7 @@
 
 .allOrdersMain{
     background-color: black;
-
+    height: 100vh;
 }
 
 .separateOrder{
@@ -23,5 +23,21 @@
 .text-violet{
     color:#8B5CF6 !important;
   }
-  
 
+  .paymentStatus {
+    position: absolute;
+    top: 0;
+    right:0;
+    padding: 15px;
+  }
+
+  .deliveryStatus{
+    position: absolute;
+    top: 35%;
+    right:0;
+    padding: 15px;
+  }
+
+  .badge .allOrdersBadge{
+    color: black;
+  }

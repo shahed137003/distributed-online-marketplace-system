@@ -27,6 +27,8 @@ import Balance from './components/Balance/Balance';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import  InventoryContextProvider  from './context/InventoryContext';
 import EditProfile from './components/EditProfile/EditProfile';
+import Checkout from './components/Checkout/Checkout';
+import Gateway from './components/Gateway/Gateway';
 
 
 
@@ -51,7 +53,9 @@ const App=()=>{
       <Route path='/createItem' element={<Createitem></Createitem>}> </Route>
       <Route path='/login' element={<AuthContextProvider><Login></Login></AuthContextProvider>}> </Route>
       <Route path='/register' element={<Register></Register>}> </Route>
-      <Route path='/allOrders' element={<AllOrders></AllOrders>}> </Route>
+      <Route path='/Previous orders' element={<AllOrders></AllOrders>}> </Route>
+      <Route path='/payment' element={<Checkout></Checkout>}> </Route>
+      <Route path='/gateway' element={<Gateway></Gateway>}> </Route>
       <Route path='/itemdetails/:product_id' element={<AuthContextProvider><CartContextProvider><ItemDetails></ItemDetails></CartContextProvider></AuthContextProvider>}> </Route>
       <Route path='/researchresults' element={<Searchresults></Searchresults>}> </Route>
       <Route path='/cart' element={<AuthContextProvider><CartContextProvider><Cart></Cart></CartContextProvider></AuthContextProvider>}> </Route>
