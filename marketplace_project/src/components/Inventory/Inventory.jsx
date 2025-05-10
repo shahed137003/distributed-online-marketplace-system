@@ -6,7 +6,7 @@ import Card from "../Card/Card";
 import axios from "axios";
 import { useQuery } from '@tanstack/react-query';
 
-function Inventory() {
+function Inventory({user_id}) {
   const {
     products,
     totalPrice,
@@ -19,14 +19,14 @@ function Inventory() {
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 8;
 
-  const getProductDetails = async () => {
-    const response = await axios.get(`https://localhost:7161/api/Inventory`);
+  const getInventory = async () => {
+    const response = await axios.get(`blablabla/${user_id}`);
     return response;
   };
 
   const { data, isLoading, isError } = useQuery({
     queryKey: ['Products'],
-    queryFn: getProductDetails,
+    queryFn: getInventory,
   });
 
   if (Loading || isLoading) {
@@ -45,21 +45,24 @@ function Inventory() {
     );
   }
 
-  const totalItems = data.data.length;
+  //const totalItems = data.data.length;
+  const totalItems = data.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
-  const currentItems = data.data.slice(startIndex, startIndex + itemsPerPage);
+  //const currentItems = data.data.slice(startIndex, startIndex + itemsPerPage);
+  const currentItems = data.slice(startIndex, startIndex + itemsPerPage);
+
 
   return (
     <>
       <div className="d-flex justify-content-evenly align-items-center flex-wrap gap-5 mt-4">
         {currentItems.map((item) => (
-          <div key={item.id} className='w-25'>
+          <div key={item._Id} className='w-25'>
             <Card
               title={item.title}
               image={item.image || "default.jpg"}
               price={item.price}
-              pro_id={item._id}
+              pro_id={item._Id}
             />
           </div>
         ))}

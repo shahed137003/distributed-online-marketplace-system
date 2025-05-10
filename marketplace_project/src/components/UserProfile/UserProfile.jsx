@@ -99,7 +99,7 @@ function UserProfile() {
             My Inventory
           </span>
           <InventoryContextProvider>
-            <Inventory />
+            <Inventory user_id={user_id}/>
           </InventoryContextProvider>
         </div>
       </div>
