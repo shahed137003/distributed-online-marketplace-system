@@ -1,17 +1,14 @@
-import React, { useContext } from 'react'
-import "./EditProfile.css";
-import authorImg from "../../assets/user.jpg";
+import React, { useContext } from 'react';
+import './EditProfile.css';
+import authorImg from '../../assets/user.jpg';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../../context/userContext';
-import { Formik } from 'formik';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import {useFormik} from 'formik';
 import { toast } from 'react-toastify';
-import axios from "axios";
-
+import axios from 'axios';
 
 function EditProfile() {
-
   const {
     Loading,
     setLoading,
@@ -25,58 +22,67 @@ function EditProfile() {
     userName
   } = useContext(UserContext);
 
-
-
-  const userProfile={
+  const userProfile = {
     userImage,
     userName,
     bio,
-    phoneNumber
-  }
+    phoneNumber,
+    facebookLink,
+    discordLink,
+    twitterLink
+  };
 
-  async function updateUser(values) { // values are sent by formik we can recieve them here 
+  async function updateUser(values) {
     setLoading(true);
-  try{
-     const {data} = await axios.post("blablabla",values); // send the values with the post method in the body which are the user object updated with new values 
-    toast.success(data.message);
-     localStorage.setItem("token",data.token);
-     setLoading(false);
-    }
-    catch(e){
-     console.error(e.response.data.message);
-     setLoading(false);
+    try {
+      const { data } = await axios.post('blablabla', values);
+      toast.success(data.message);
+      localStorage.setItem('token', data.token);
+      setLoading(false);
+    } catch (e) {
+      console.error(e.response?.data?.message || e.message);
+      toast.error(e.response?.data?.message || 'An error occurred');
+      setLoading(false);
     }
   }
 
+  const validationSchema = Yup.object().shape({
+    userImage: Yup.mixed()
+      .required('User image is required')
+      .test('fileType', 'Unsupported file format', value =>
+        value && ['image/jpeg', 'image/png', 'image/jpg'].includes(value.type)
+      ),
 
+    userName: Yup.string()
+      .required('Username is required')
+      .matches(/^[a-zA-Z0-9_ ]{3,30}$/, 'Username must be 3-30 characters and contain only letters, numbers, spaces, or underscores'),
 
-const validationSchema = Yup.object().shape({
+    bio: Yup.string().max(200, 'Bio cannot exceed 200 characters'),
 
-  userImage: Yup.mixed()
-    .required('User image is required')
-    .test('fileType', 'Unsupported file format', value =>
-      value && ['image/jpeg', 'image/png', 'image/jpg'].includes(value.type)
-    ),
+    phoneNumber: Yup.string()
+      .required('Phone number is required')
+      .matches(/^\+?[0-9]{10,15}$/, 'Phone number must be valid and contain 10 to 15 digits'),
 
-  userName: Yup.string()
-    .required('Username is required')
-    .matches(/^[a-zA-Z0-9_ ]{3,30}$/, 'Username must be 3-30 characters and contain only letters, numbers, spaces, or underscores'),
+    facebookLink: Yup.string()
+      .url('Facebook link must be a valid URL')
+      .nullable(),
 
-  bio: Yup.string()
-    .max(200, 'Bio cannot exceed 200 characters'),
+    discordLink: Yup.string()
+      .url('Discord link must be a valid URL')
+      .nullable(),
 
-  phoneNumber: Yup.string()
-    .required('Phone number is required')
-    .matches(/^\+?[0-9]{10,15}$/, 'Phone number must be valid and contain 10 to 15 digits'),
-});
+    twitterLink: Yup.string()
+      .url('Twitter link must be a valid URL')
+      .nullable(),
+  });
 
-const formik = useFormik({
+  const formik = useFormik({
     initialValues: userProfile,
     onSubmit: updateUser,
     validationSchema: validationSchema
-})
+  });
 
-   return (
+  return (
     <div className="main">
       <div className="container mt-5 text-white">
         <h1 className="text-center mb-4">Edit Profile</h1>
@@ -137,6 +143,51 @@ const formik = useFormik({
             />
             {formik.touched.bio && formik.errors.bio && (
               <div className="text-danger">{formik.errors.bio}</div>
+            )}
+          </div>
+
+          <div className="form-group mt-3">
+            <label>Facebook Link</label>
+            <input
+              type="text"
+              name="facebookLink"
+              className="form-control"
+              value={formik.values.facebookLink}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.facebookLink && formik.errors.facebookLink && (
+              <div className="text-danger">{formik.errors.facebookLink}</div>
+            )}
+          </div>
+
+          <div className="form-group mt-3">
+            <label>Discord Link</label>
+            <input
+              type="text"
+              name="discordLink"
+              className="form-control"
+              value={formik.values.discordLink}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.discordLink && formik.errors.discordLink && (
+              <div className="text-danger">{formik.errors.discordLink}</div>
+            )}
+          </div>
+
+          <div className="form-group mt-3">
+            <label>Twitter Link</label>
+            <input
+              type="text"
+              name="twitterLink"
+              className="form-control"
+              value={formik.values.twitterLink}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.twitterLink && formik.errors.twitterLink && (
+              <div className="text-danger">{formik.errors.twitterLink}</div>
             )}
           </div>
 
