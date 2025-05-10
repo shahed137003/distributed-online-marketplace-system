@@ -251,7 +251,7 @@ const Gateway = () => {
                 
                     // Format to MM/YY
                     if (raw.length >= 3) {
-                      raw = ${raw.slice(0, 2)}/${raw.slice(2)};
+                      raw = `${raw.slice(0, 2)}/${raw.slice(2)}`;
                     }
                 
                     formik.setFieldValue('expiryDate', raw);
