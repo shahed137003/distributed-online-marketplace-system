@@ -18,7 +18,7 @@ const Login = () =>{
 
   const navigate = useNavigate();
   const [isLoading, setisLoading] = useState(false);
-  const {setToken,setLoggedUserId} = useContext(AuthContext);
+  const {setToken,setLoggedUserId,LoggedUserId} = useContext(AuthContext);
  // initial values of data fields that should be returned to the backend with the values in the input 
  // formik catches them and update these fields on change and sends them to the onSubmit fn
 const user = {
@@ -38,7 +38,7 @@ try{
    localStorage.setItem("token",data.token);
    setToken(data.token);
    setLoggedUserId(data.userId);
-   navigate('/userProfile');
+   navigate(`/userProfile/${LoggedUserId}`);
    setisLoading(false);
   }
   catch(e){
