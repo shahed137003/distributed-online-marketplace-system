@@ -54,7 +54,11 @@ function NavBar() {
     />
   </Badge>
 </IconButton>
-        <h1 style={{color:"#6f42c1",marginTop:"5px",marginLeft:"0px",fontSize:"30px",fontFamily:'Times New Roman'}}>FATION</h1>
+        <h2 style={{ fontWeight: 'bold', fontSize: '24px', color: '#fff' }}>
+  <span style={{ color: '#fff' }}>Fashion</span>
+  <span style={{ color: '#6f42c1' }}>Store</span>
+</h2>
+
       </div>
 
       {/* Cart & Search */}
@@ -72,6 +76,8 @@ function NavBar() {
               }
             }}
             onChange={(e) => setSearchTerm(e.target.value)}
+             onMouseEnter={e => (e.currentTarget.style.color = '#8e44ad')}
+             onMouseLeave={e => (e.currentTarget.style.color = '#6f42c1')}
           />
            <IconButton
     type="submit"
@@ -115,6 +121,8 @@ function NavBar() {
             navigate('/cart');
             onUpdateActiveLink('');
           }}
+            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}
         >
           <Badge
   badgeContent={numOfItems}
@@ -131,7 +139,9 @@ function NavBar() {
         <IconButton  onClick={() => {
             navigate('/userProfile');
             onUpdateActiveLink('');
-          }}>
+          }}
+            onMouseEnter={(e) => (e.currentTarget.style.transform = 'scale(1.05)')}
+  onMouseLeave={(e) => (e.currentTarget.style.transform = 'scale(1)')}>
       <Avatar
         sx={{
           bgcolor: 'transparent',          // make the base transparent

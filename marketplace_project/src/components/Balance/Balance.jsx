@@ -71,7 +71,7 @@ for (let number = 3; number <= 5; number++) {
       width: '300px',
       height: '300px',
       objectFit: 'cover',
-      border: '2px solid #6f42c1',
+      // border: '2px solid #6f42c1',
       boxShadow: '0 2px 8px rgba(0,0,0,0.5)',
       marginLeft:'5px'
     }}

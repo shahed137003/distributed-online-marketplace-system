@@ -31,7 +31,9 @@
 .custom-pagination .page-link:focus {
   box-shadow: 0 0 0 0.2rem rgba(142, 68, 173, 0.25); /* Focus effect */
 }
-
+.purple-glow {
+  box-shadow: 0 0 20px 6px rgba(128, 0, 128, 0.6);
+}
 
 
 

@@ -1,6 +1,6 @@
 
 .footer {
-    background-image: url('../../assets/footer-bg.png');    /* Dark background */
+    background-color: #2a2a2a;    /* Dark background */
     background-size: cover;
     color: #ccc;                  /* Light grey text */
   }
