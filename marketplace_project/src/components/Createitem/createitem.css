@@ -1,0 +1,45 @@
+.itemCreator {
+    background-image: url('../../assets/banner-bg.png');
+
+    background-size: cover;
+    height: 20vh;
+
+  }
+  .purple-button {
+    background-color: #6f42c1; /* Bootstrap "purple" */
+    color: #fff;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 10px rgba(111, 66, 193, 0.3);
+   margin-bottom: 10px;
+  }
+  
+  .purple-button:hover {
+    background-color: #5a32a3;
+    transform: scale(1.05);
+  }
+
+
+  .custom-form {
+    background-color: #2a2a2a;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #8B5CF6;
+    max-width: 800px;
+    margin: 10px auto;
+    margin-left: auto; /* Push the form to the right */
+    margin-right: 100px;  /* Ensure the form is aligned to the right */
+  }
+  
+  .Formcontainer {
+    padding: 10px 0;
+    background-color: #1e1e1e; /* dark background */
+    position: relative; /* Add this to make Card position relative to Formcontainer */
+    min-height: 100vh; /* Ensure the container has enough height for all content */
+  }
+  
