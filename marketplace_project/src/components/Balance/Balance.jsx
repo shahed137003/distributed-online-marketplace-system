@@ -2,6 +2,8 @@ import React, {  useContext,useState} from 'react';
 import './Balance.css'
 import Image from 'react-bootstrap/Image';
 import Row from 'react-bootstrap/Row';
+import Footer from '../Footer/Footer';
+
 import Col from 'react-bootstrap/Col';
 import Container from 'react-bootstrap/Container';
 import authorImg from "../../assets/user.jpg"
@@ -194,7 +196,7 @@ for (let number = 3; number <= 5; number++) {
   </Tabs>
 </div>
 
-
+<Footer></Footer>
 </div>
 
 
