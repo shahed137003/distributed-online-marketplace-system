@@ -1,150 +1,135 @@
-import axios from './../../../node_modules/axios/lib/axios';
-import { Formik } from 'formik';
+import React, { useContext } from 'react';
+import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import '../Register/Register.css'
-import {useFormik} from 'formik'
-import {useState} from "react";
-import { FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
-import { Container, Row, Col, Form, Button, Alert, Spinner, Nav} from 'react-bootstrap';
-import { useNavigate } from 'react-router-dom';
-import './Login.css'
-import { Link } from 'react-router-dom';
-import { AuthContext } from '../../context/AuthContext';
-import { useContext } from "react"
 import { toast } from 'react-toastify';
+import axios from 'axios';
+import { UserContext } from '../../context/userContext';
+import authorImg from "../../assets/user.jpg";
+import './EditProfile.css';
 
-const Login = () =>{
+function EditProfile() {
+  const {
+    setLoading,
+    userImage,
+    phoneNumber,
+    bio,
+    userName,
+  } = useContext(UserContext);
 
-  const navigate = useNavigate();
-  const [isLoading, setisLoading] = useState(false);
-  const {setToken,setLoggedUserId,LoggedUserId} = useContext(AuthContext);
- // initial values of data fields that should be returned to the backend with the values in the input 
- // formik catches them and update these fields on change and sends them to the onSubmit fn
-const user = {
-       
-        email:"",
-        password:"",
-      
-    }
+  const initialValues = {
+    userImage: userImage,
+    userName: userName || '',
+    bio: bio || '',
+    phoneNumber: phoneNumber || ''
+  };
 
-// signUp fn
-
-async function signIn(values) { // values are sent by formik we can recieve them here 
-  setisLoading(true);
-try{
-   const {data} = await axios.post("https://localhost:7161/api/Account/Login",values); // send the values with the post method in the body which are the user object updated with new values 
-  toast.success(data.message);
-   localStorage.setItem("token",data.token);
-   setToken(data.token);
-   setLoggedUserId(data.userId);
-   navigate(`/userProfile/${LoggedUserId}`);
-   setisLoading(false);
-  }
-  catch(e){
-   console.error(e.response.data.message);
-   setisLoading(false);
-  }
-}
-
-// validationSchema 
-
-const signupSchema = Yup.object().shape({
-    
-   
-    email: Yup.string().email('Invalid email').required('Email is a required field'),
-
-    password: Yup.string().required('Password is a required field').matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-]).{8,}$/,"Password must consist of minimum eight characters, at least one upper case English letter, one lower case English letter, one number and one special character"),
-   
-
+  const validationSchema = Yup.object({
+    userImage: Yup.mixed()
+      .required('User image is required')
+      .test('fileType', 'Unsupported format', value =>
+        value && ['image/jpeg', 'image/png', 'image/jpg'].includes(value.type)
+      ),
+    userName: Yup.string()
+      .required('Username is required')
+      .matches(/^[a-zA-Z0-9_ ]{3,30}$/, 'Must be 3-30 characters'),
+    bio: Yup.string().max(200, 'Bio can’t exceed 200 characters'),
+    phoneNumber: Yup.string()
+      .required('Phone number is required')
+      .matches(/^\+?[0-9]{10,15}$/, 'Must be 10-15 digits'),
   });
 
+  const onSubmit = async values => {
+    try {
+      setLoading(true);
+      const { data } = await axios.post("blablablaa", values);
+      toast.success(data.message);
+      localStorage.setItem("token", data.token);
+    } catch (e) {
+      toast.error(e.response?.data?.message || "Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
 
-const formik = useFormik({
-    initialValues: user,
-    onSubmit: signIn,
-    validationSchema: signupSchema
-})
+  const formik = useFormik({
+    initialValues,
+    validationSchema,
+    onSubmit
+  });
 
-return (
-  // <div className="signUpWrapper">
-  <>
-  <div className="main">
-  <div className="w-100 d-flex justify-content-center align-items-center">
-    <h1 className="text-center mt-5 text-violet fs-1 fw-bold">Login </h1>
-    {isLoading ? (
-      <FontAwesomeIcon icon={faRocket} size="lg" className="text-violet mt-5 ms-3 fa-spin fs-1 fw-bold" />
-    ) : (
-      <FontAwesomeIcon icon={faRocket} size="lg" className="text-violet mt-5 ms-3 fs-1 fw-bold " />
-    )}
-  </div>
-
-  <Container className="w-100 mx-auto mt-5 d-flex align-items-center justify-content-center">
-    <Row className="w-100">
-      <Col>
-        <Form onSubmit={formik.handleSubmit} className="w-50 mx-auto">
-          {/* Email input */}
-          <Form.Group className="mb-3" controlId="email">
-            <Form.Label className="text-white">Email</Form.Label>
-            <Form.Control
-              type="email"
-              placeholder="admin@gmail.com"
-              value={formik.values.email}
-              onChange={formik.handleChange}
+  return (
+    <div className="main">
+      <div className="container mt-5 text-white">
+        <h1 className="text-center mb-4">Edit Profile</h1>
+        <form onSubmit={formik.handleSubmit}>
+          <div className="d-flex align-items-center justify-content-center flex-column gap-2">
+            <img src={authorImg} alt="User" className="img-fluid rounded" />
+            <input
+              type="file"
+              name="userImage"
+              onChange={e => formik.setFieldValue('userImage', e.currentTarget.files[0])}
               onBlur={formik.handleBlur}
-              className="w-80 mx-auto"
-              required
+              className="form-control"
             />
-          </Form.Group>
-          {formik.errors.email && formik.touched.email ? (
-            <Alert variant="primary" className="mx-auto">
-              Error! {formik.errors.email}
-            </Alert>
-          ) : null}
-
-          {/* Password input */}
-          <Form.Group className="mb-3" controlId="password">
-            <Form.Label className="text-white">Password</Form.Label>
-            <Form.Control
-              type="password"
-              placeholder="****"
-              value={formik.values.password}
-              onChange={formik.handleChange}
-              onBlur={formik.handleBlur}
-              className="w-80 mx-auto"
-              required
-            />
-          </Form.Group>
-          {formik.errors.password && formik.touched.password ? (
-            <Alert variant="primary" className="mx-auto">
-              Error! {formik.errors.password}
-            </Alert>
-          ) : null}
-
-          <Button type="submit" className="w-100 fw-bold bg-violet rounded-3">
-            {isLoading ? (
-              <Spinner as="span" animation="border" size="sm" role="status" aria-hidden="true">
-                <span className="visually-hidden">Loading...</span>
-              </Spinner>
-            ) : (
-              'Login'
+            {formik.touched.userImage && formik.errors.userImage && (
+              <div className="text-danger">{formik.errors.userImage}</div>
             )}
-          </Button>
-         <h3 className="text-white mt-5 text-center">Don't have an account?...<Link  to='/register' className="text-violet ms-3">Sign Up</Link></h3>
-        </Form>
-      </Col>
-    </Row>
-  </Container>
-  </div>
-  
-{/* </div> */}
+          </div>
 
-</>
+          <div className="form-group mt-3">
+            <label>Name</label>
+            <input
+              type="text"
+              name="userName"
+              className="form-control"
+              value={formik.values.userName}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.userName && formik.errors.userName && (
+              <div className="text-danger">{formik.errors.userName}</div>
+            )}
+          </div>
 
+          <div className="form-group mt-3">
+            <label>Phone Number</label>
+            <input
+              type="text"
+              name="phoneNumber"
+              className="form-control"
+              value={formik.values.phoneNumber}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.phoneNumber && formik.errors.phoneNumber && (
+              <div className="text-danger">{formik.errors.phoneNumber}</div>
+            )}
+          </div>
 
+          <div className="form-group mt-3">
+            <label>Bio</label>
+            <textarea
+              name="bio"
+              className="form-control"
+              value={formik.values.bio}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+              rows="3"
+            />
+            {formik.touched.bio && formik.errors.bio && (
+              <div className="text-danger">{formik.errors.bio}</div>
+            )}
+          </div>
 
-)
-
+          <div className="text-center mt-4">
+            <button type="submit" className="btn btn-violet fw-bold">
+              Save Changes
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
 }
 
-export default Login
+export default EditProfile;

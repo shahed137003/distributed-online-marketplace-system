@@ -45,6 +45,7 @@ const UserContextProvider = ({ children }) => {
       setUserImage(data.ownerImage || null);
       setBio(data.Bio || null);
       setPhoneNumber(data.phoneNumber || null);
+      
 
       return data;
     } catch (error) {
@@ -52,6 +53,9 @@ const UserContextProvider = ({ children }) => {
       return null;
     } 
   }
+
+
+ 
 
   return (
     <UserContext.Provider

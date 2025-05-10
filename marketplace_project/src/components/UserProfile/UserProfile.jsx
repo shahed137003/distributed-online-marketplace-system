@@ -78,13 +78,13 @@ function UserProfile() {
                           <a href={facebookLink}><i className="fa-brands fa-square-facebook text-white"></i></a>
                           <a href={discordLink}><i className="fa-brands fa-discord text-white"></i></a>
                           <a href={twitterLink}><i className="fa-brands fa-square-twitter text-white"></i></a>
-                          <button
+                          {loggedUserId==user_id?<button
                             type="button"
                             className="btn btn-outline-secondary text-white rounded-4 border border-2"
                             onClick={() => navigate(`/editProfile`)}
                           >
                             Edit Profile
-                          </button>
+                          </button>:}
                         </div>
                       </div>
                       <h5 className="fs-1">{userName}</h5>
