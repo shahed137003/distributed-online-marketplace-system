@@ -25,7 +25,7 @@ function Inventory({user_id}) {
   };
 
   const { data, isLoading, isError } = useQuery({
-    queryKey: ['Products'],
+    queryKey: ['Inventory', user_id],
     queryFn: getInventory,
   });
 
@@ -37,20 +37,20 @@ function Inventory({user_id}) {
     );
   }
 
-  if (isError || !data?.data) {
-    return (
-      <div className="text-white text-center mt-5">
-        <h4>Error loading products.</h4>
-      </div>
-    );
-  }
+  // if (isError || !data?.data) {
+  //   return (
+  //     <div className="text-white text-center mt-5">
+  //       <h4>Error loading products.</h4>
+  //     </div>
+  //   );
+  // }
 
   //const totalItems = data.data.length;
-  const totalItems = data.length;
+  const totalItems = data.products.length;
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   const startIndex = (currentPage - 1) * itemsPerPage;
   //const currentItems = data.data.slice(startIndex, startIndex + itemsPerPage);
-  const currentItems = data.slice(startIndex, startIndex + itemsPerPage);
+  const currentItems = data.products.slice(startIndex, startIndex + itemsPerPage);
 
 
   return (
