@@ -134,7 +134,10 @@ useEffect(function(){
             cartId,
             numOfItems,
             Loading,
-            token
+            token,
+            setNumOfItems,
+            setProducts,
+            setTotalPrice
            }
         }>
            {children}
