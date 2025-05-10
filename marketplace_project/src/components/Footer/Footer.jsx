@@ -42,7 +42,7 @@ export default function Footer() {
         {/* Bottom Copyright */}
         <Row>
           <Col className="text-center" style={{ color: '#aaa', fontSize: '14px' }}>
-            © 2025 SALE Square. All rights reserved.
+            © 2025 Fashion store. All rights reserved.
           </Col>
         </Row>
       </Container>
