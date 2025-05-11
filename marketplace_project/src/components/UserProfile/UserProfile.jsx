@@ -87,15 +87,33 @@ function UserProfile() {
                             <i className="fa-brands fa-square-twitter text-white"></i>
                           </a>
                           </div>
-                           {loggedUserId === user_id && (
-                        <button
-                          type="button"
-                          className="btn btn-outline-secondary text-white rounded-4 border border-2 mt-2"
-                          onClick={() => navigate(`/editProfile`)}
-                        >
-                          Edit Profile
-                        </button>
-                      )}
+                     {loggedUserId === user_id && (
+  <div className="d-flex gap-3 mt-2 flex-wrap">
+    <button
+      type="button"
+      className="btn btn-outline-secondary text-white rounded-4 border border-2"
+      onClick={() => navigate(`/editProfile`)}
+    >
+      Edit Profile
+    </button>
+
+    <button
+      type="button"
+      className="btn btn-outline-secondary text-white rounded-4 border border-2"
+      onClick={() => navigate(`/balance`)}
+    >
+      Check Balance
+    </button>
+
+    <button
+      type="button"
+      className="btn btn-outline-secondary text-white rounded-4 border border-2"
+      onClick={() => navigate(`/createItem`)} 
+    >
+      Create Item
+    </button>
+  </div>
+)}
                         </div>
                       </div>
                      
