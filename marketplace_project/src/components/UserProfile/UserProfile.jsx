@@ -118,22 +118,8 @@ function UserProfile() {
         </div>
       </div>
         
-                          <div>
-                            <a href="https://www.linkedin.com/in/habiba-kenawy-65606227a">
-                              <i className="fa-brands fa-square-facebook text-white"></i>
-                            </a>
-                          </div>
-                          <div>
-                            <a href="#">
-                              <i className="fa-brands fa-square-twitter text-white"></i>
-                            </a>
-                          </div>
-                          <div>
-                            <a href="#">
-                              <i className="fa-brands fa-discord text-white"></i>
-                            </a>
-                          </div>
-                          <button type="button" className="btn btn-outline-secondary  text-white rounded-4  border border-2'"   onClick={() => navigate(`/editProfile`)}>Edit Profile</button>
+                          
+
               
     </>
   );
