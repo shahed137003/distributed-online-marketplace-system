@@ -110,57 +110,83 @@ function EditProfile() {
   };
 
   return (
-    <div className="main">
-      <div className="container pt-5 text-white">
-        <h1 className="text-center mb-4">Edit Profile</h1>
+    <div className="container-fluid" style={{ backgroundColor: "#0A0615", minHeight: "200vh" }}>
+  <div className="container pt-5">
 
-        {initialValues ? (
-          <Formik
-            initialValues={initialValues}
-            onSubmit={updateUser}
-            validationSchema={validationSchema}
-            enableReinitialize={true}
-          >
-            {formik => (
-              <form onSubmit={formik.handleSubmit}>
-                <div className="d-flex align-items-center justify-content-center flex-column gap-2">
-                  {formik.values.userImage && (
-                    typeof formik.values.userImage === 'string' ? (
-                      <img
-                        src={formik.values.userImage}
-                        alt="User"
-                        className="img-fluid rounded"
-                      />
-                    ) : (
-                      <img
-                        src={URL.createObjectURL(formik.values.userImage)}
-                        alt="User"
-                        className="img-fluid rounded"
-                      />
-                    )
-                  )}
+    {/* TOP BREADCRUMB SECTION */}
+    <div className="userBread d-flex justify-content-center align-items-center flex-column">
+      <h2 className="fs-1 text-white">Edit Profile</h2>
+      <nav aria-label="breadcrumb">
+        <ol className="breadcrumb">
+          <li className="breadcrumb-item text-secondary">
+            <a href="/home" className="text-decoration-none text-secondary">Home</a>
+          </li>
+          <li className="breadcrumb-item text-secondary">
+            <a href={`/userProfile/${userId}`} className="text-decoration-none text-secondary">Profile</a>
+          </li>
+          <li className="breadcrumb-item active text-white" aria-current="page">Edit Profile</li>
+        </ol>
+      </nav>
+    </div>
+
+    {/* FORM SECTION */}
+    {initialValues ? (
+      <Formik
+        initialValues={initialValues}
+        onSubmit={updateUser}
+        validationSchema={validationSchema}
+        enableReinitialize={true}
+      >
+        {formik => (
+          <form onSubmit={formik.handleSubmit}>
+            <div className="row">
+
+              {/* IMAGE COLUMN */}
+              <div className="col-sm-2">
+                <div className="img_container" style={{ backgroundColor: '#201F2D' }}>
+                  <div className="img p-3">
+                    {formik.values.userImage && (
+                      typeof formik.values.userImage === 'string' ? (
+                        <img
+                          src={formik.values.userImage}
+                          alt="User"
+                          className="img-fluid rounded-start rounded-3 w-100 d-block"
+                        />
+                      ) : (
+                        <img
+                          src={URL.createObjectURL(formik.values.userImage)}
+                          alt="User"
+                          className="img-fluid rounded-start rounded-3 w-100 d-block"
+                        />
+                      )
+                    )}
+                  </div>
                   <input
                     type="file"
                     name="userImage"
-                    onChange={e =>
-                      formik.setFieldValue('userImage', e.currentTarget.files[0])
-                    }
+                    onChange={e => formik.setFieldValue('userImage', e.currentTarget.files[0])}
                     onBlur={formik.handleBlur}
-                    className="form-control"
+                    className="form-control m-3"
                   />
                   <button
                     type="button"
                     onClick={() => handleRemoveImage(formik.setFieldValue)}
+                    className="btn btn-outline-secondary text-white rounded-4 border border-2 m-3"
                   >
                     Remove Image
                   </button>
                   {formik.touched.userImage && formik.errors.userImage && (
-                    <div className="text-danger">{formik.errors.userImage}</div>
+                    <div className="text-danger px-3">{formik.errors.userImage}</div>
                   )}
                 </div>
+              </div>
 
-                <div className="form-group mt-3">
-                  <label>Name</label>
+              {/* ACCOUNT INFO COLUMN */}
+              <div className="col-sm-5">
+                <h2 className="text-white">Account Info</h2>
+
+                <div className="mb-3">
+                  <label className="form-label text-white">Name</label>
                   <input
                     type="text"
                     name="userName"
@@ -174,8 +200,8 @@ function EditProfile() {
                   )}
                 </div>
 
-                <div className="form-group mt-3">
-                  <label>Phone Number</label>
+                <div className="mb-3">
+                  <label className="form-label text-white">Phone Number</label>
                   <input
                     type="text"
                     name="phoneNumber"
@@ -189,8 +215,8 @@ function EditProfile() {
                   )}
                 </div>
 
-                <div className="form-group mt-3">
-                  <label>Bio</label>
+                <div className="mb-3">
+                  <label className="form-label text-white">Bio</label>
                   <textarea
                     name="bio"
                     className="form-control"
@@ -204,8 +230,21 @@ function EditProfile() {
                   )}
                 </div>
 
-                <div className="form-group mt-3">
-                  <label>Facebook Link</label>
+                <button
+                  type="submit"
+                  className="btn btn-outline-secondary text-white rounded-4 border border-2 mt-2"
+                  disabled={loading}
+                >
+                  {loading ? 'Saving...' : 'Save Changes'}
+                </button>
+              </div>
+
+              {/* SOCIAL MEDIA COLUMN */}
+              <div className="col-sm-5">
+                <h2 className="text-white">Your Social Media</h2>
+
+                <div className="mb-3">
+                  <label className="form-label text-white">Facebook Link</label>
                   <input
                     type="text"
                     name="facebookLink"
@@ -219,23 +258,8 @@ function EditProfile() {
                   )}
                 </div>
 
-                <div className="form-group mt-3">
-                  <label>Discord Link</label>
-                  <input
-                    type="text"
-                    name="discordLink"
-                    className="form-control"
-                    value={formik.values.discordLink}
-                    onChange={formik.handleChange}
-                    onBlur={formik.handleBlur}
-                  />
-                  {formik.touched.discordLink && formik.errors.discordLink && (
-                    <div className="text-danger">{formik.errors.discordLink}</div>
-                  )}
-                </div>
-
-                <div className="form-group mt-3">
-                  <label>Twitter Link</label>
+                <div className="mb-3">
+                  <label className="form-label text-white">Twitter Link</label>
                   <input
                     type="text"
                     name="twitterLink"
@@ -249,19 +273,32 @@ function EditProfile() {
                   )}
                 </div>
 
-                <div className="text-center mt-4">
-                  <button type="submit" className="btn btn-violet fw-bold" disabled={loading}>
-                    {loading ? 'Saving...' : 'Save Changes'}
-                  </button>
+                <div className="mb-3">
+                  <label className="form-label text-white">Discord Link</label>
+                  <input
+                    type="text"
+                    name="discordLink"
+                    className="form-control"
+                    value={formik.values.discordLink}
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                  />
+                  {formik.touched.discordLink && formik.errors.discordLink && (
+                    <div className="text-danger">{formik.errors.discordLink}</div>
+                  )}
                 </div>
-              </form>
-            )}
-          </Formik>
-        ) : (
-          <p>Loading profile...</p>
+              </div>
+
+            </div>
+          </form>
         )}
-      </div>
-    </div>
+      </Formik>
+    ) : (
+      <p className="text-white">Loading profile...</p>
+    )}
+  </div>
+</div>
+
   );
 }
 
