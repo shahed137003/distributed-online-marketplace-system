@@ -72,18 +72,22 @@ function UserProfile() {
                           className="icons d-flex justify-content-between align-items-center fs-4"
                           style={{ width: "30%" }}
                         >
+                        <div>
                           <a href={facebookLink || "#"} target="_blank" rel="noopener noreferrer">
                             <i className="fa-brands fa-square-facebook text-white"></i>
                           </a>
+                          </div>
+                          <div>
                           <a href={discordLink || "#"} target="_blank" rel="noopener noreferrer">
                             <i className="fa-brands fa-discord text-white"></i>
                           </a>
+                          </div>
+                          <div>
                           <a href={twitterLink || "#"} target="_blank" rel="noopener noreferrer">
                             <i className="fa-brands fa-square-twitter text-white"></i>
                           </a>
-                        </div>
-                      </div>
-                      {loggedUserId === user_id && (
+                          </div>
+                           {loggedUserId === user_id && (
                         <button
                           type="button"
                           className="btn btn-outline-secondary text-white rounded-4 border border-2 mt-2"
@@ -92,6 +96,9 @@ function UserProfile() {
                           Edit Profile
                         </button>
                       )}
+                        </div>
+                      </div>
+                     
                       <h5 className="fs-1 mt-3">{userName}</h5>
                       <p>{bio}</p>
                     </div>
@@ -110,6 +117,24 @@ function UserProfile() {
           </InventoryContextProvider>
         </div>
       </div>
+        
+                          <div>
+                            <a href="https://www.linkedin.com/in/habiba-kenawy-65606227a">
+                              <i className="fa-brands fa-square-facebook text-white"></i>
+                            </a>
+                          </div>
+                          <div>
+                            <a href="#">
+                              <i className="fa-brands fa-square-twitter text-white"></i>
+                            </a>
+                          </div>
+                          <div>
+                            <a href="#">
+                              <i className="fa-brands fa-discord text-white"></i>
+                            </a>
+                          </div>
+                          <button type="button" className="btn btn-outline-secondary  text-white rounded-4  border border-2'"   onClick={() => navigate(`/editProfile`)}>Edit Profile</button>
+              
     </>
   );
 }
