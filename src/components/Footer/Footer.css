@@ -1,0 +1,38 @@
+
+.footer {
+    background-image: url('../../assets/footer-bg.png');    /* Dark background */
+    background-size: cover;
+    color: #ccc;                  /* Light grey text */
+  }
+  
+  .footer-text {
+    font-size: 0.9rem;
+  }
+  
+  .social-icons {
+    display: inline-flex;
+    gap: 1rem;
+  }
+  
+  .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #333;             /* Slightly lighter circle */
+    color: #fff;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+  }
+  
+  .social-icons a:hover {
+    background: #6f42c1;          /* Purple accent on hover */
+    transform: translateY(-2px);
+  }
+  
+  .social-icons a:focus {
+    outline: 2px solid #6f42c1;   /* Accessibility focus ring */
+    outline-offset: 2px;
+  }

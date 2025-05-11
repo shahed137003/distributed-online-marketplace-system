@@ -1,0 +1,21 @@
+.userBread{
+    height: 20vh;
+    background-image:url('../../assets/banner-bg.png');
+    /* background-position: center; */
+    background-size: cover;
+    /* background-color: #0A0615; */
+}
+
+.userImg{
+    width: 100%;
+    display: block;
+}
+
+.userCard{
+    background-image: url('../../assets/background_3.jpg');
+ /* background-position: center; */
+}
+
+.content{
+    /* width:100% */
+}
