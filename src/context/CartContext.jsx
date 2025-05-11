@@ -54,7 +54,7 @@ const CartContextProvider = ({ children }) => {
                         'productId': productId
                     }
                 });
-         //   getLoggedUserCart(); 
+            getLoggedUserCart(); 
             return data;
         } catch (error) {
             console.log(error, "Error from add product to cart context");

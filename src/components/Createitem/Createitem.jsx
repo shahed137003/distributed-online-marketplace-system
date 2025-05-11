@@ -15,9 +15,9 @@ export default function Createitem() {
   const [formData, setFormData] = useState({
     price: '',
     title: '',
-    productDescription: '',
+    ProductDescription: '',
     category: '',
-    stockQuantity: ''
+    StockQuantity: ''
   });
 
   const handleChangeData = (e) => {
@@ -47,15 +47,15 @@ export default function Createitem() {
 
     const formDataToSend = new FormData();
     formDataToSend.append('title', formData.title);
-    formDataToSend.append('description', formData.productDescription);
+    formDataToSend.append('ProductDescription', formData.ProductDescription); // ✅ FIXED
     formDataToSend.append('price', formData.price);
     formDataToSend.append('category', formData.category);
-    formDataToSend.append('quantity', formData.stockQuantity);
+    formDataToSend.append('StockQuantity', formData.StockQuantity); // ✅ FIXED
     formDataToSend.append('file', document.querySelector('input[type="file"]').files[0]);
 
     try {
       const token = localStorage.getItem('token'); 
-  
+
       const response = await axios.post('https://localhost:7161/api/Product', formDataToSend, {
         headers: {
           'Authorization': `Bearer ${token}`, 
@@ -73,12 +73,8 @@ export default function Createitem() {
     }
   };
 
-
-
-
   return (
     <>
-      {/* Centered Alert Overlay */}
       {show && (
         <div
           style={{
@@ -153,7 +149,7 @@ export default function Createitem() {
           <Card.Img variant="top" src={selectedFile || "https://via.placeholder.com/150"} />
           <Card.Body>
             <Card.Title>{formData.title || 'Card title'}</Card.Title>
-            <Card.Text>{formData.productDescription || 'description'}</Card.Text>
+            <Card.Text>{formData.ProductDescription || 'description'}</Card.Text>
             <Card.Text>price {formData.price || 'price'}</Card.Text>
             <button className="purple-button">Details</button>
           </Card.Body>
@@ -187,13 +183,13 @@ export default function Createitem() {
             />
           </Form.Group>
 
-          <Form.Group controlId="formproductDescription" className="mb-3">
+          <Form.Group controlId="formProductDescription" className="mb-3">
             <Form.Label className="text-white">Enter description</Form.Label>
             <Form.Control
-              name="productDescription"
+              name="ProductDescription"
               type="text"
               placeholder="Type something..."
-              value={formData.productDescription}
+              value={formData.ProductDescription}
               onChange={handleChangeData}
             />
           </Form.Group>
@@ -209,16 +205,17 @@ export default function Createitem() {
             />
           </Form.Group>
           
-          <Form.Group controlId="formstockQuantity" className="mb-3">
+          <Form.Group controlId="formStockQuantity" className="mb-3">
             <Form.Label className="text-white">Enter quantity</Form.Label>
             <Form.Control
-              name="stockQuantity"
+              name="StockQuantity"
               type="text"
               placeholder="Type something..."
-              value={formData.stockQuantity}
+              value={formData.StockQuantity}
               onChange={handleChangeData}
             />
           </Form.Group>
+          
           <Form.Group className="mb-3" controlId="formBasicCheckbox">
             <Form.Check type="checkbox" label="Check me out" className="text-white" />
           </Form.Group>
