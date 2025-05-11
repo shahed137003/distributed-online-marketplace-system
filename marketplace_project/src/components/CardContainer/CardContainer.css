@@ -1,0 +1,116 @@
+/* card for the entire container */
+/* Container Section */
+/* Section wrapper */
+.cardContainer {
+    padding: 60px 0;
+    background-color: #1e1e1e;   /* dark background */
+  }
+  
+  /* Inner box with heading */
+  .cardContainer-bx {
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border-radius: 1rem;         /* rounded corners */
+    background-color: #2a2a2a;   /* slightly lighter dark panel */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+  }
+  
+  /* Section title */
+  .cardContainer-bx h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #e0e0e0;              /* light gray text */
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Underline accent */
+  .cardContainer-bx h2::after {
+    content: '';
+    display: block;
+    width: 50%;
+    height: 4px;
+    background-color: #6f42c1;   /* purple accent */
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+  }
+  
+  /* Carousel container padding */
+  .owl-carousel.skill-slider {
+    padding-bottom: 30px;
+  }
+  
+  /* Carousel card wrapper (if used) */
+  .card-wrapper {
+    margin: 0 10px;
+    border-radius: 0.5rem;       /* round each slide container */
+    overflow: hidden;            /* clip child content */
+    background-color: #333;      /* card background */
+    box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+  }
+  
+  /* Navigation buttons (prev/next) */
+  .owl-carousel .owl-nav button {
+    background: rgba(111, 66, 193, 0.8);
+    border: none;
+    color: #fff;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 1.2rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  /* Positioning nav buttons */
+  .owl-carousel .owl-nav .owl-prev { left: -20px; }
+  .owl-carousel .owl-nav .owl-next { right: -20px; }
+  
+  /* Dots styling */
+  .owl-carousel .owl-dots {
+    margin-top: 1rem;
+  }
+  .owl-carousel .owl-dot span {
+    width: 12px;
+    height: 12px;
+    background: #555;
+    display: block;
+    border-radius: 50%;
+    margin: 5px;
+  }
+  .owl-carousel .owl-dot.active span {
+    background: #6f42c1;
+  }
+  
+  /* Responsive tweaks */
+  @media (max-width: 768px) {
+    .cardContainer {
+      padding: 40px 0;
+    }
+    .cardContainer-bx {
+      padding: 20px 15px;
+    }
+    .cardContainer-bx h2 {
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .cardContainer {
+      padding: 30px 0;
+    }
+    .cardContainer-bx {
+      padding: 15px;
+    }
+    .cardContainer-bx h2 {
+      font-size: 1.75rem;
+    }
+    .owl-carousel .owl-nav .owl-prev { left: -10px; }
+    .owl-carousel .owl-nav .owl-next { right: -10px; }
+  }
+  
+  
+  

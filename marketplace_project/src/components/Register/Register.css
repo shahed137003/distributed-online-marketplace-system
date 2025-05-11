@@ -1,0 +1,48 @@
+/* 
+.signUpWrapper  {
+  min-height: 100vh;
+  width: 100%;
+  background-color:   white; 
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+
+.signUpWrapper .w-80 {
+  width: 80%;
+}
+
+.signUpWrapper .bg-violet {
+  background-color: #8B5CF6 !important;
+}
+
+.signUpWrapper .text-violet {
+  color: #8B5CF6 !important;
+} */
+
+
+
+/* *{
+  background-color:black;
+} */
+.w-80{
+  width:80%;
+}
+
+.bg-violet{
+  background-color:#8B5CF6 !important;
+}
+
+.text-violet{
+  color:#8B5CF6 !important;
+}
+
+.main{
+  background-color: black;
+  height: 100vh;
+}
+
