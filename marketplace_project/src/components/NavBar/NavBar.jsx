@@ -14,6 +14,8 @@ import {  Avatar } from '@mui/material';
 import PersonIcon from '@mui/icons-material/Person';
 import './NavBar.css'
 import { CartContext } from "../../context/CartContext"
+import { AuthContext } from "../../context/AuthContext";
+
 import Dropdown from 'react-bootstrap/Dropdown';
 function NavBar() {
   const [activeLink, setActiveLink] = useState('home');
@@ -33,6 +35,8 @@ function NavBar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
   const navigate = useNavigate();
+  const { loggedUserId } = useContext(AuthContext);
+  
   return (
     <Navbar expand="md" className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}>
     <Container className="d-flex align-items-center justify-content-between">
@@ -129,7 +133,7 @@ function NavBar() {
 </Badge>
         </IconButton> 
         <IconButton  onClick={() => {
-            navigate('/userProfile');
+            navigate(`/userProfile/${loggedUserId}`);
             onUpdateActiveLink('');
           }}>
       <Avatar

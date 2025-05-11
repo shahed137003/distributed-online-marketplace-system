@@ -5,25 +5,21 @@ import axios from 'axios'; // for fetching products data
 import "react-multi-carousel/lib/styles.css"; // to ensure Carousel styles are applied
 import './CardContainer.css'
 import CreatorCard from '../CreatorCard/CreatorCard';
-// import { DataContext } from '../context/Itemcontext';
-import ownerImage from '../../assets/owner.png';
 import { DataContext } from '../../context/Itemcontext';
 import { UserContext } from '../../context/userContext';
 import { useQuery} from '@tanstack/react-query';
 
 export default function CardContainer() {
-
   const { products } = useContext(DataContext);
-  const {getAllUserProfiles}=useContext(UserContext)
-  // Fetching products from the API
+  const { getAllUserProfiles } = useContext(UserContext);
 
-   //const data = getAllUserProfiles();
-  
   const { data, isLoading, isError, error } = useQuery({
     queryKey: ['allUsers'],
     queryFn: getAllUserProfiles,
   });
- console.log(data);
+
+  // Check data or API structure
+  console.log(data); // See if the data is correct
 
   const responsive = {
     superLargeDesktop: {
@@ -44,54 +40,57 @@ export default function CardContainer() {
     }
   };
 
+  if (isLoading) {
+    return <div>Loading...</div>;
+  }
+
+  if (isError) {
+    return <div>Error: {error.message}</div>;
+  }
+
   return (
-    // Use the correct context provider
-    
-      <section className="cardContainer">
-        <div className="container">
-          <div className="row">
-            <div className="col-12">
-              <div className="cardContainer-bx wow zoomIn">
-                <h2>Items 🛍️</h2>
+    <section className="cardContainer">
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="cardContainer-bx wow zoomIn">
+              <h2>Items 🛍️</h2>
 
-                {/* Carousel Component */}
-                <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                  {products.map((product) => (
-                    <div key={product._Id}>
-                      <Card
-                        title={product.title}
-                        image={product.image} // Assuming the first image is the one to display
-                        price={product.price}
-                        pro_id={product._Id}
-                      />
-                    </div>
-                  ))}
-                </Carousel>
-              </div>
-              <div className="cardContainer-bx wow zoomIn">
-                <h2>Creators</h2>
-
-                {/* Carousel Component */}
-                <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                {data?.data.map((profile, idx) => (
+              {/* Carousel Component */}
+              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                {products?.map((product, idx) => (
                   <div key={idx}>
-                    <CreatorCard
-                      UserName={profile.userName}
-                      user_id={profile?.userID}
-                      product_1_img={profile.inventory?.products[0]?.image}
-                      product_2_img={profile.inventory?.products[1]?.image}
-                      product_3_img={profile.inventory?.products[2]?.image}
-                      ownerImg={profile.ownerImage}
+                    <Card
+                      title={product?.title}
+                      image={product?.image} // Assuming the first image is the one to display
+                      price={product?.price}
+                      pro_id={product?._Id}
                     />
                   </div>
                 ))}
-                </Carousel>
+              </Carousel>
+            </div>
+            <div className="cardContainer-bx wow zoomIn">
+              <h2>Creators</h2>
 
-              </div>
+              {/* Carousel Component */}
+              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                {data?.data?.map((profile, idx) => (
+                  <div key={idx}>
+                    <CreatorCard
+                      UserName={profile?.userName}
+                      product_1_img={profile?.inventory?.products[0]?.image}
+                      product_2_img={profile?.inventory?.products[0]?.image}
+                      product_3_img={profile?.inventory?.products[0]?.image}
+                      ownerImg={profile?.ownerImage}
+                    />
+                  </div>
+                ))}
+              </Carousel>
             </div>
           </div>
         </div>
-      </section>
-   
+      </div>
+    </section>
   );
 }

@@ -1,144 +1,116 @@
 import axios from "axios";
-import { createContext, useContext, useEffect, useState } from "react"
+import { createContext, useContext, useEffect, useState } from "react";
 import { AuthContext } from "./AuthContext";
-//import { useNavigate } from 'react-router-dom';
 
 export const InventoryContext = createContext();
 
-const InventoryContextProvider = ({children}) => {
-    const {token} = useContext(AuthContext);
-    const [products,setProducts] = useState([]);
-    const [stockQuantity,setNumOfItems] = useState(0);
-    const [totalPrice,setTotalPrice] = useState(0);
-    const [Loading,setLoading] = useState(false);
+const InventoryContextProvider = ({ children }) => {
+  const { token } = useContext(AuthContext);
 
-    const [inventoryId,setInventoryId] = useState(null);
+  const [products, setProducts] = useState([]);
+  const [stockQuantity, setNumOfItems] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [Loading, setLoading] = useState(false);
+  const [inventoryId, setInventoryId] = useState(null);
 
-    async function getLoggedUserInventory(){
-        setLoading(true);
-        try {
-        const {data} = await axios.get("https://localhost:7161/api/Inventory",
-        {
-            headers:{
-                'Authorization': `Bearer ${token}`
-            }
+  async function getLoggedUserInventory() {
+    if (!token) return;
+    setLoading(true);
+    try {
+      const response = await axios.get("https://localhost:7161/api/Inventory", {
+        headers: {
+          Authorization: `Bearer ${token}`
         }
-    );
-    setProducts(data.products);
-    setNumOfItems(data.stockQuantity);
-    setTotalPrice(data.totalPrice);
-    setInventoryId(data.inventoryId);
-    setLoading(false);
-    return data
- } catch (error) {
-    console.log(error,"error from get logged user function")
-    setLoading(false);
-}
-}
-//const navigate = useNavigate();
+      });
 
-useEffect(function(){
-    if(token !== null){
-        getLoggedUserInventory();
-       }
-},[token]);
+      const data = response.data[0].products;
+      console.log(" Data:", data);
 
-
-     
-     async function addProductToInventory(productId){
-        if(!token){
-                return { status: "unauthorized", message: "Please log in first" };       
-        }
-        try {
-            const {data} = await axios.post("https://localhost:7161/api/Product",
-                {
-                    productId:productId
-                },
-                {
-                    headers:{
-                       'Authorization': `Bearer ${token}`
-                       }
-                }
-            )
-            getLoggedUserInventory();
-            return data;
-            
-        } catch (error) {
-            console.log(error,"error from add product to cart context");
-        }
+      setProducts(response.data[0]?.products || []);
+      setNumOfItems(response.data[0]?.stockQuantity || 0);
+      setTotalPrice(response.data[0]?.totalPrice || 0);
+      setInventoryId(response.data[0]?.inventoryId || null);
+    } catch (error) {
+      console.error("Error fetching inventory:", error);
+    } finally {
+      setLoading(false);
     }
+  }
 
-    async function updateProductQnty(productId,count){
-      try {
-        const {data} = await axios.put(`https://localhost:7161/api/Product/${productId}`,{
-            count:count
-        },
-        {
-        headers:{
-          'Authorization': `Bearer ${token}`
-        }
-    });
-    setNumOfItems(data.stockQuantity);
-    setProducts(data.products);
-    setTotalPrice(data.totalPrice);
-      } catch (error) {
-        console.log(error,"Error from update product function");
-      }
+  useEffect(() => {
+    if (token) {
+      getLoggedUserInventory();
     }
+  }, [token]);
 
-    async function removeProduct(productId){
-        try{
-          const {data} = await axios.delete(`https://localhost:7161/api/Product/${productId}`,{
-            headers:{
-               'Authorization': `Bearer ${token}`
-            }
-          });
-          setNumOfItems(data.stockQuantity);
-          setProducts(data.products);
-          setTotalPrice(data.totalPrice);
-        }catch(error){
-            console.log(error,"error from removeItem in context");
-        }
+  async function addProductToInventory(productId) {
+    if (!token) {
+      return { status: "unauthorized", message: "Please log in first" };
     }
+    try {
+      await axios.post("https://localhost:7161/api/Product", { productId }, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
+      await getLoggedUserInventory();
+    } catch (error) {
+      console.error("Error adding product:", error);
+    }
+  }
 
-    // async function clearCart(){
-    //     try {
-    //         const {data} = await axios.delete(`https://ecommerce.routemisr.com/api/v1/cart`, {
-                 
-    //             headers:{
-    //               'Authorization': `Bearer ${token}`
-    //             }
-                 
-    //         }
-    //             );
-    //       setNumOfItems(data.stockQuantity);
-    //       setProducts([]);
-    //       setTotalPrice(data.totalPrice);
-    //     } catch (error) {
-    //         console.log(error,"error from clear cart in context");
-            
-    //     }
-    // }
+  async function updateProductQnty(productId, count) {
+    try {
+      const response = await axios.put(`https://localhost:7161/api/Product/${productId}`, { count }, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
 
+      const data = response.data;
+      setProducts(data.products || []);
+      setNumOfItems(data.stockQuantity || 0);
+      setTotalPrice(data.totalPrice || 0);
+    } catch (error) {
+      console.error("Error updating quantity:", error);
+    }
+  }
 
+  async function removeProduct(productId) {
+    try {
+      const response = await axios.delete(`https://localhost:7161/api/Product/${productId}`, {
+        headers: {
+          Authorization: `Bearer ${token}`
+        }
+      });
 
-    return (
-        <InventoryContext.Provider value={
-           {addProductToInventory,
-            getLoggedUserInventory,
-            updateProductQnty,
-            removeProduct,
-         
-            products,
-            totalPrice,
-            inventoryId,
-            stockQuantity,
-            Loading,
-            token
-           }
-        }>
-           {children}
-        </InventoryContext.Provider>
-         )
-}
-export default InventoryContextProvider
+      const data = response.data;
+      setProducts(data.products || []);
+      setNumOfItems(data.stockQuantity || 0);
+      setTotalPrice(data.totalPrice || 0);
+    } catch (error) {
+      console.error("Error removing product:", error);
+    }
+  }
+
+  return (
+    <InventoryContext.Provider
+      value={{
+        addProductToInventory,
+        getLoggedUserInventory,
+        updateProductQnty,
+        removeProduct,
+        products,
+        totalPrice,
+        inventoryId,
+        stockQuantity,
+        Loading,
+        token
+      }}
+    >
+      {children}
+    </InventoryContext.Provider>
+  );
+};
+
+export default InventoryContextProvider;

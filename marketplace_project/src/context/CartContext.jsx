@@ -37,7 +37,7 @@ const CartContextProvider = ({ children }) => {
 
     useEffect(() => {
         if (token !== null) {
-            getLoggedUserCart();
+            //getLoggedUserCart();
         }
     }, [token]);
 
@@ -54,7 +54,7 @@ const CartContextProvider = ({ children }) => {
                         'productId': productId
                     }
                 });
-            getLoggedUserCart(); // Update cart after adding product
+         //   getLoggedUserCart(); 
             return data;
         } catch (error) {
             console.log(error, "Error from add product to cart context");
@@ -140,7 +140,7 @@ const CartContextProvider = ({ children }) => {
     return (
         <CartContext.Provider value={{
             addProductToCart,
-            getLoggedUserCart,
+           // getLoggedUserCart,
             updateProductQnty,
             removeProduct,
             clearCart,

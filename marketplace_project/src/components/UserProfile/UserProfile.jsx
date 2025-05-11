@@ -1,14 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import "./UserProfile.css";
 import authorImg from "../../assets/user.jpg";
 import { useNavigate, useParams } from 'react-router-dom';
 import Inventory from "../Inventory/Inventory";
-import  InventoryContextProvider  from '../../context/InventoryContext';
-import { useQuery} from '@tanstack/react-query';
+import InventoryContextProvider from '../../context/InventoryContext';
 import { UserContext } from '../../context/userContext';
 import { AuthContext } from "../../context/AuthContext";
-
-
 
 function UserProfile() {
   const {
@@ -27,14 +24,14 @@ function UserProfile() {
   const { user_id } = useParams();
   const navigate = useNavigate();
 
-  const { data, isLoading, isError, error } = useQuery({
-    queryKey: ['UserProfile', user_id],
-    queryFn: () => getUserProfile(user_id),
-    enabled: !!user_id, // ensures query runs only when user_id is available
-  });
+  useEffect(() => {
+    if (user_id) {
+      getUserProfile(user_id);
+    }
+  }, [user_id]);
 
-  if (isLoading || Loading) return <div className="text-white text-center mt-5">Loading...</div>;
-  if (isError) return <div className="text-danger text-center mt-5">Error: {error.message}</div>;
+  if (Loading)
+    return <div className="text-white text-center mt-5">Loading...</div>;
 
   return (
     <>
@@ -75,19 +72,27 @@ function UserProfile() {
                           className="icons d-flex justify-content-between align-items-center fs-4"
                           style={{ width: "30%" }}
                         >
-                          <a href={facebookLink}><i className="fa-brands fa-square-facebook text-white"></i></a>
-                          <a href={discordLink}><i className="fa-brands fa-discord text-white"></i></a>
-                          <a href={twitterLink}><i className="fa-brands fa-square-twitter text-white"></i></a>
-                          {loggedUserId==user_id?<button
-                            type="button"
-                            className="btn btn-outline-secondary text-white rounded-4 border border-2"
-                            onClick={() => navigate(`/editProfile`)}
-                          >
-                            Edit Profile
-                          </button>:}
+                          <a href={facebookLink || "#"} target="_blank" rel="noopener noreferrer">
+                            <i className="fa-brands fa-square-facebook text-white"></i>
+                          </a>
+                          <a href={discordLink || "#"} target="_blank" rel="noopener noreferrer">
+                            <i className="fa-brands fa-discord text-white"></i>
+                          </a>
+                          <a href={twitterLink || "#"} target="_blank" rel="noopener noreferrer">
+                            <i className="fa-brands fa-square-twitter text-white"></i>
+                          </a>
                         </div>
                       </div>
-                      <h5 className="fs-1">{userName}</h5>
+                      {loggedUserId === user_id && (
+                        <button
+                          type="button"
+                          className="btn btn-outline-secondary text-white rounded-4 border border-2 mt-2"
+                          onClick={() => navigate(`/editProfile`)}
+                        >
+                          Edit Profile
+                        </button>
+                      )}
+                      <h5 className="fs-1 mt-3">{userName}</h5>
                       <p>{bio}</p>
                     </div>
                   </div>
@@ -95,15 +100,18 @@ function UserProfile() {
               </div>
             </div>
           </div>
+
           <span className="ms-5 text-white p-3 fs-4 rounded-4 border border-2 border-light">
             My Inventory
           </span>
-          <InventoryContextProvider>
-            <Inventory user_id={user_id}/>
+
+          <InventoryContextProvider key={user_id}>
+            <Inventory user_id={user_id} />
           </InventoryContextProvider>
         </div>
       </div>
     </>
   );
 }
+
 export default UserProfile;
